@@ -21,32 +21,39 @@ Para inicializar o git flow no seu projeto, você deve ter, no mínimo, iniciali
 1. **`Develop`**: quando concluir as configurações iniciais, o próprio git lhe redirecionará para a branch de desenvolvimento. Portanto, não precisa ser criada, como informado anteriormente.
 2. **`feature`**: 
   - para criar basta usar
-```Bash
-git flow feature start <nome da branch>
-```
+  ```Bash
+  git flow feature start <nome da branch>
+  ```
   - para publicá-la no Github você precisa ter no mínimo um commit a ser publicado (`git add .`, `git commit -m "mensagem aqui"`) e usar
-```Bash
-git flow feature publish <nome da branch>
-```
+  ```Bash
+  git flow feature publish <nome da branch>
+  ```
   - para finalizá-la e fazer o merge com a branch develop, basta usar
-```Bash
-git flow feature finish <nome da branch>
-```
+  ```Bash
+  git flow feature finish <nome da branch>
+  ```
 2. **`release`**:
   - para criar basta usar
-```Bash
-git flow release start <numero da versão de preferencia>
-```
+  ```Bash
+  git flow release start <numero da versão de preferencia>
+  ```
   - para finalizá-la e fazer o merge com a branch `main`, basta usar
-```Bash
-git flow feature finish -m "sua mensagem" <numero da versão de preferencia>
-```
-Mas isso não irá levar as alterações para o repositório remoto. Para fazer isto você ainda precisará dos comandos `pull` e `push` do GitHub. Sendo mais especifico, você precisaria dar os dois comandos para atualizar as branchs principais, ou seja,
-```Bash
-git push origin main
-git push origin develop
-```
-Uma alternativa a estes dois comando seria ir para a branch de desenvolvimento (`git checkout develop`) e usar o comando
-```Bash
-git push --all
-```
+  ```Bash
+  git flow feature finish -m "sua mensagem" <numero da versão de preferencia>
+  ```
+  Mas isso não irá levar as alterações para o repositório remoto. Para fazer isto você ainda precisará dos comandos `pull` e `push` do GitHub. Sendo mais especifico, você precisaria dar os dois comandos para atualizar as branchs principais, ou seja,
+  ```Bash
+  git push origin main
+  git push origin develop
+  ```
+  Uma alternativa a estes dois comando seria ir para a branch de desenvolvimento (`git checkout develop`) e usar o comando
+  ```Bash
+  git push --all
+  ```
+
+## Considerações
+É importante manter o repositório remoto sempre atualizado com as funcionalidades concluídas, logo éimportante lembrar que comandos básicos do Git funcionaram corretamente. Exemplo:
+- para atualizar o repositório remoto, basta usar `git push origin develop`
+- para atualizar o repositório local com as funcionalidades implementada pelo time, basta usar `git pull origin develop`
+
+Para melhores informações ou explicações, assim o [video] (https://youtu.be/394mc6PV8t8?si=8a5D91i0oY40zhAM)
