@@ -56,4 +56,4 @@ Para inicializar o git flow no seu projeto, você deve ter, no mínimo, iniciali
 - para atualizar o repositório remoto, basta usar `git push origin develop`
 - para atualizar o repositório local com as funcionalidades implementada pelo time, basta usar `git pull origin develop`
 
-Para melhores informações ou explicações, assim o [video] (https://youtu.be/394mc6PV8t8?si=8a5D91i0oY40zhAM)
+Para melhores informações ou explicações, assim o [video](https://youtu.be/394mc6PV8t8?si=8a5D91i0oY40zhAM)
