@@ -15,7 +15,7 @@ Aqui estão os principais conceitos do Git Flow:
 
 Vale lembrar que as branchs temporárias mencionadas fará uma cópia dos dados da atual (localmente) branch de desenvolvimento.
 
-## **Códigos**
+### **Códigos**
 Para inicializar o git flow no seu projeto, você deve ter, no mínimo, inicializado um repositório com `git init`. O comando para inicializar o git flow é `git flow init`. Lembrando que para puxar e enviar modificações do/para o GitHub, é necessário que os repositórios estejam devidamente vinculados, tanto o local quanto o remoto.
 
 1. **`Develop`**: quando concluir as configurações iniciais, o próprio git lhe redirecionará para a branch de desenvolvimento. Portanto, não precisa ser criada, como informado anteriormente.
@@ -51,7 +51,7 @@ Para inicializar o git flow no seu projeto, você deve ter, no mínimo, iniciali
   git push --all
   ```
 
-## Considerações
+### Considerações
 É importante manter o repositório remoto sempre atualizado com as funcionalidades concluídas, logo éimportante lembrar que comandos básicos do Git funcionaram corretamente. Exemplo:
 - para atualizar o repositório remoto, basta usar `git push origin develop`
 - para atualizar o repositório local com as funcionalidades implementada pelo time, basta usar `git pull origin develop`
