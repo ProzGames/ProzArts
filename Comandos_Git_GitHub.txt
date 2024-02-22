@@ -1,0 +1,25 @@
+git clone + link do repositório - Usado para puxar um arquivo do github para a máquina local.
+
+git branch feature/ + nome da branch - cria uma nova branch.
+
+git branch -a - mostra quais branch existem, desde que tenham pelo menos 1 commit
+
+git branch + nome da branch - criar uma brach
+
+git checkout + nome da branch - mudar de branch
+
+git merge - funde as branchs, usado para atualizar uma branch principal, por exemplo a develop.
+
+(FAZER DIARIAMENTE)
+
+git pull - traz os commits do repositório remoto, ou seja, atualiza seus arquivos.
+
+git checkout - + nome da branch para mudar de branch.
+
+git status - Mostra em qual situação está o repositório, por exemplo, se precisa salvar algum arquivo.
+
+git add . - Adiciona os arquivos que ainda não estão no repositório para serem salvos posteriormente no commit.
+
+git commit -m “” - fazer um commit, geralmente dentro do aspas você coloca uma descrição do que foi feito, o commit serve para “salvar” o arquivo no repositório.
+
+git push origin + nome da branch - usado para subir seu commit no github.
