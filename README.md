@@ -41,7 +41,7 @@ git flow release start <numero da versão de preferencia>
 ```Bash
 git flow feature finish -m "sua mensagem" <numero da versão de preferencia>
 ```
-Mas isso não irá publicar levar as alterações para o repositório remoto. Para fazer isto você ainda precisará dos comandos `pull` e `push` do GitHub. Sendo mais especifico, você precisaria dar os dois comandos para atualizar as branchs principais, ou seja,
+Mas isso não irá levar as alterações para o repositório remoto. Para fazer isto você ainda precisará dos comandos `pull` e `push` do GitHub. Sendo mais especifico, você precisaria dar os dois comandos para atualizar as branchs principais, ou seja,
 ```Bash
 git push origin main
 git push origin develop
