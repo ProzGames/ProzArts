@@ -22,24 +22,24 @@ Para inicializar o git flow no seu projeto, você deve ter, no mínimo, iniciali
 2. **`feature`**: 
   - para criar basta usar
 ```Bash
-git flow feature start "<"nome da branch">"
+git flow feature start <nome da branch>
 ```
   - para publicá-la no Github você precisa ter no mínimo um commit a ser publicado (`git add .`, `git commit -m "mensagem aqui"`) e usar
 ```Bash
-git flow feature publish "<"nome da branch">"
+git flow feature publish <nome da branch>
 ```
   - para finalizá-la e fazer o merge com a branch develop, basta usar
 ```Bash
-git flow feature finish "<"nome da branch">"
+git flow feature finish <nome da branch>
 ```
 2. **`release`**:
   - para criar basta usar
 ```Bash
-git flow release start "<"numero da versão de preferencia">"
+git flow release start <numero da versão de preferencia>
 ```
   - para finalizá-la e fazer o merge com a branch `main`, basta usar
 ```Bash
-git flow feature finish -m "sua mensagem" "<"numero da versão de preferencia">"
+git flow feature finish -m "sua mensagem" <numero da versão de preferencia>
 ```
 Mas isso não irá publicar levar as alterações para o repositório remoto. Para fazer isto você ainda precisará dos comandos `pull` e `push` do GitHub. Sendo mais especifico, você precisaria dar os dois comandos para atualizar as branchs principais, ou seja,
 ```Bash
