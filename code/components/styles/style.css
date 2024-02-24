@@ -4,3 +4,56 @@
   padding: 0;
   margin: 0;
 }
+
+header {
+  background-color: var(--background-menu-and-footer);
+  display: flex;
+  align-items: center;
+  color: var(--font-color-secondary);
+}
+
+header h1 {
+  font-size: 1.5em;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 60px;
+  max-width: max-content;
+  width: 100%;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+}
+
+header li {
+  margin-right: 20px;
+}
+
+header a {
+  padding: 10px;
+
+  text-decoration: none;
+  color: var(--font-color-secondary);
+}
+
+header a:hover {
+  cursor: pointer;
+}
+
+#login {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+#login button {
+  background-color: #F17F1A;
+  border-radius: 7px;
+  padding: 8px;
+  border: none;
+  color: var(--font-color-secondary);
+  width: 7em;
+  right: 100px;
+  margin-right: 40px;
+}
