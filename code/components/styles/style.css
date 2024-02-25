@@ -68,12 +68,14 @@ footer {
   padding-right: 60px;
   flex-direction: column;
   color: var(--font-color-terciary);
+  padding-bottom: 60px;
 }
 
-footer #conteudo {
+footer #links-e-configs {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  border-bottom: 0.2px solid var(--font-color-terciary);
 }
 
 footer h3 {
@@ -81,7 +83,7 @@ footer h3 {
   color: var(--font-color-secondary);
 }
 
-footer #conteudo #likes-contato h3 {
+footer #links-e-configs #contato h3 {
   text-align: end;
 }
 
@@ -125,4 +127,40 @@ footer #idiomas #caixa-de-idioma p {
 footer #idiomas #caixa-de-idioma img {
   max-width: 40px;
   max-height: 20px;
+}
+
+footer #informacao {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  margin-top: 20px;
+}
+
+footer #informacao #links {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+footer #informacao #imgs {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 50%;
+}
+
+footer #informacao #imgs #selo {
+  max-width: 400px;
+  max-height: 200px;
+}
+
+footer #informacao #imgs #faixa-etaria {
+  margin-left: 20px;
+  background-color: red;
+  padding: 10px;
+}
+
+footer #informacao #imgs #faixa-etaria h1 {
+  color: var(--font-color-secondary);
 }
