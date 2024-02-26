@@ -1,3 +1,9 @@
+const pagina = document.querySelector("title").textContent
+
+var url = "";
+if (pagina === "Inicio") uri = "./"
+else url = "../../"
+
 document.querySelector("footer")
   .innerHTML = `<div id="links-e-configs">
   <div id="site">
@@ -27,7 +33,7 @@ document.querySelector("footer")
     <div id="caixa-de-idioma">
       <p>Language</p>
       <span>
-        <img src="./images/bd-br.jfif" alt="bandeira do brasil">
+        <img src="${url}images/bd-br.jfif" alt="bandeira do brasil">
         <select name="" id="">
           <option value="pt-br">Brazil</option>
         </select>
@@ -50,7 +56,7 @@ document.querySelector("footer")
     </p>
   </div>
   <div id="imgs">
-    <img id="selo" src="./images/seal_PSV_ru_l.svg" alt="selo TRUSTe">
+    <img id="selo" src="${url}images/seal_PSV_ru_l.svg" alt="selo TRUSTe">
     <div id="faixa-etaria">
       <h1>16</h1>
     </div>
