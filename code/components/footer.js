@@ -1,8 +1,12 @@
 const pagina = document.querySelector("title").textContent
 
-var url = "";
-if (pagina === "Inicio") uri = "./"
-else url = "../../"
+//diretorio onde se encontra o html que está usando este componente levando em consideração a araiz do projeto
+var uriDoIndexAtual = "";
+if (pagina === "Inicio") uriDoIndexAtual = "./"
+else uriDoIndexAtual = "../../"
+
+//colocar a localização do html das paginas
+const uriComunidade = uriDoIndexAtual + "pages/comunidade/comunidade.html";
 
 document.querySelector("footer")
   .innerHTML = `<div id="links-e-configs">
@@ -13,7 +17,7 @@ document.querySelector("footer")
         <li><a href="#">Sobre</a></li>
         <li><a href="#">Compromisso</a></li>
         <li><a href="#">Jogos</a></li>
-        <li><a href="#">Comunidade</a></li>
+        <li><a href="${uriComunidade}">Comunidade</a></li>
       </ul>
     </aside>
   </div>
@@ -33,7 +37,7 @@ document.querySelector("footer")
     <div id="caixa-de-idioma">
       <p>Language</p>
       <span>
-        <img src="${url}images/bd-br.jfif" alt="bandeira do brasil">
+        <img src="${uriDoIndexAtual}images/bd-br.jfif" alt="bandeira do brasil">
         <select name="" id="">
           <option value="pt-br">Brazil</option>
         </select>
@@ -56,7 +60,7 @@ document.querySelector("footer")
     </p>
   </div>
   <div id="imgs">
-    <img id="selo" src="${url}images/seal_PSV_ru_l.svg" alt="selo TRUSTe">
+    <img id="selo" src="${uriDoIndexAtual}images/seal_PSV_ru_l.svg" alt="selo TRUSTe">
     <div id="faixa-etaria">
       <h1>16</h1>
     </div>
@@ -71,7 +75,7 @@ document.querySelector("header")
       <li><a href="#">Sobre</a></li>
       <li><a href="#">Compromisso</a></li>
       <li><a href="#">Jogos</a></li>
-      <li><a href="#">Comunidade</a></li>
+      <li><a href="${uriComunidade}">Comunidade</a></li>
     </ul>
   </nav>
   <div id="login">
