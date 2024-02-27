@@ -8,6 +8,22 @@ else uriDoIndexAtual = "../../"
 //colocar a localização do html das paginas
 const uriComunidade = uriDoIndexAtual + "pages/comunidade/comunidade.html";
 
+document.querySelector("header")
+  .innerHTML = `
+  <h1>Proz Arts</h1>
+  <nav id="menuBar">
+    <ul>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Compromisso</a></li>
+      <li><a href="#">Jogos</a></li>
+      <li><a href="${uriComunidade}">Comunidade</a></li>
+    </ul>
+  </nav>
+  <div id="login">
+    <button>LOGIN</button>
+  </div>
+`
+
 document.querySelector("footer")
   .innerHTML = `<div id="links-e-configs">
   <div id="site">
@@ -66,19 +82,3 @@ document.querySelector("footer")
     </div>
   </div>
 </div>`
-
-document.querySelector("header")
-  .innerHTML = `
-  <h1>Proz Arts</h1>
-  <nav id="menuBar">
-    <ul>
-      <li><a href="#">Sobre</a></li>
-      <li><a href="#">Compromisso</a></li>
-      <li><a href="#">Jogos</a></li>
-      <li><a href="${uriComunidade}">Comunidade</a></li>
-    </ul>
-  </nav>
-  <div id="login">
-    <button>LOGIN</button>
-  </div>
-`
