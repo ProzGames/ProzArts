@@ -1,5 +1,11 @@
 :root {
-  --background-menu-and-footer: #454545;
+  --background-menu-and-footer: #252525;
+  --background-color-um: #F3F3F3;
+  --background-color-dois: #EAEAEA;
+  --background-color-tres: #4E4E4E;
+  --background-color-quatro: #252525;
+  --background-color-cinco: #000000;
+  --font-color-primary: #000000;
   --font-color-secondary: #F3F3F3;
   --font-color-terciary: #A3A3A3;
 }
