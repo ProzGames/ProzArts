@@ -7,14 +7,16 @@ else uriDoIndexAtual = "../../"
 
 //colocar a localização do html das paginas
 const uriComunidade = uriDoIndexAtual + "pages/comunidade/comunidade.html";
+const uriSobre = uriDoIndexAtual + "pages/Sobre/index.html"
+const uriCompromisso = uriDoIndexAtual + "pages/Compromissos/index.html"
 
 document.querySelector("header")
   .innerHTML = `
   <h1>Proz Arts</h1>
   <nav id="menuBar">
     <ul>
-      <li><a href="#">Sobre</a></li>
-      <li><a href="#">Compromisso</a></li>
+      <li><a href="${uriSobre}">Sobre</a></li>
+      <li><a href="${uriCompromisso}">Compromisso</a></li>
       <li><a href="#">Jogos</a></li>
       <li><a href="${uriComunidade}">Comunidade</a></li>
     </ul>
@@ -30,8 +32,8 @@ document.querySelector("footer")
     <h3>Proz Arts</h3>
     <aside>
       <ul>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Compromisso</a></li>
+        <li><a href="${uriSobre}">Sobre</a></li>
+        <li><a href="${uriCompromisso}">Compromisso</a></li>
         <li><a href="#">Jogos</a></li>
         <li><a href="${uriComunidade}">Comunidade</a></li>
       </ul>
