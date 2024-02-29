@@ -30,29 +30,25 @@ document.querySelector("header")
 
 document.querySelector("footer")
   .innerHTML = `<div id="links-e-configs">
-  <div id="site">
+  <aside id="site">
     <h3>Proz Arts</h3>
-    <aside>
-      <ul>
-        <li><a href="${uriSobre}">Sobre</a></li>
-        <li><a href="${uriCompromisso}">Compromisso</a></li>
-        <li><a href="${uriJogos}">Jogos</a></li>
-        <li><a href="${uriComunidade}">Comunidade</a></li>
-      </ul>
-    </aside>
-  </div>
-  <div id="contato">
+    <ul>
+      <li><a href="${uriSobre}">Sobre</a></li>
+      <li><a href="${uriCompromisso}">Compromisso</a></li>
+      <li><a href="${uriJogos}">Jogos</a></li>
+      <li><a href="${uriComunidade}">Comunidade</a></li>
+    </ul>
+  </aside>
+  <aside id="contato">
     <h3>Nossas Redes</h3>
-    <aside>
-      <ul>
-        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-        <li><a href="#"><i class="fa-brands fa-twitch"></i></a></li>
-      </ul>
-    </aside>
-  </div>
+    <ul>
+      <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+      <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+      <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+      <li><a href="#"><i class="fa-brands fa-twitch"></i></a></li>
+    </ul>
+  </aside>
   <div id="idiomas">
     <div id="caixa-de-idioma">
       <p>Language</p>
