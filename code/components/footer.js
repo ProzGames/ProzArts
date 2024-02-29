@@ -6,7 +6,7 @@ if (pagina === "Inicio") uriDoIndexAtual = "./"
 else uriDoIndexAtual = "../../"
 
 //colocar a localização do html das paginas
-const uriHome = uriDoIndexAtual + "pages/home/home.html"
+const uriHome = uriDoIndexAtual + "index.html"
 const uriComunidade = uriDoIndexAtual + "pages/comunidade/comunidade.html";
 const uriSobre = uriDoIndexAtual + "pages/Sobre/index.html"
 const uriCompromisso = uriDoIndexAtual + "pages/Compromissos/index.html"
