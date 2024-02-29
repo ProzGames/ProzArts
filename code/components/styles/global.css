@@ -1,1 +1,51 @@
 @import url("./pallete.css");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: var(--background-color-quatro);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  font-size: 1.5em;
+  width: 100vw;
+}
+
+header h1 a {
+  padding-left: 30px;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+
+  padding: 10px;
+  width: 50vw;
+}
+
+header #login {
+  width: 25vw;
+  display: flex;
+  justify-content: end;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--font-color-secondary);
+}
+
+header button {
+  background-color: var(--background-color-seis);
+  color: var(--font-color-secondary);
+
+  margin-right: 30px;
+  padding: 10px;
+  width: 131px;
+}
