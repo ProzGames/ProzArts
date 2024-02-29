@@ -1,1 +1,40 @@
 @import url("./pallete.css");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: var(--background-color-quatro);
+  color: var(--font-color-secondary);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer #links-e-configs,
+footer #informacao {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer #links-e-configs div {
+  width: 33%;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer a {
+  color: var(--font-color-terciary);
+}
+
+footer img {
+  max-width: 40px;
+}
