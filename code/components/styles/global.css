@@ -8,7 +8,7 @@
 
 footer {
   background-color: var(--background-color-quatro);
-  color: var(--font-color-dois);
+  color: var(--font-color-tres);
 
   display: flex;
   flex-direction: column;
@@ -25,6 +25,7 @@ footer ul {
 }
 
 footer h3 {
+  color: var(--font-color-quatro);
   margin-bottom: 15px;
 }
 
@@ -46,8 +47,6 @@ footer #links-e-configs {
 }
 
 footer #informacao {
-  color: var(--font-color-cinco);
-
   padding-top: 1em;
 }
 
@@ -70,10 +69,6 @@ footer #links-e-configs #idiomas {
 
 footer #links-e-configs #idioma {
   width: 15%;
-}
-
-footer #contato h3 {
-  color: var(--font-color-quatro);
 }
 
 footer #contato a {
