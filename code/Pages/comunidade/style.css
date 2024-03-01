@@ -1,5 +1,9 @@
 @import url("../../components/styles/global.css");
 
+main {
+  color: var(--font-color-um);
+}
+
 main h3 {
   font-size: 2em;
 }
@@ -7,6 +11,7 @@ main h3 {
 #mural {
   position: relative;
   color: var(--font-color-dois);
+  width: 100%;
 }
 
 #mural div {
@@ -17,7 +22,7 @@ main h3 {
 }
 
 #mural img {
-  max-width: 100vw;
+  max-width: 100%;
 }
 
 #mural h1 {
@@ -26,6 +31,10 @@ main h3 {
 
 #mural h3 {
   font-size: 2em;
+}
+
+#servidor {
+  width: 100%;
 }
 
 #servidor #descricao {
@@ -52,7 +61,7 @@ main h3 {
   grid-template-columns: repeat(4, 1fr);
 
   gap: 1em;
-  padding: 7em;
+  padding: 5em;
   width: 100%;
   height: min-content;
 }
@@ -92,4 +101,42 @@ main h3 {
   padding: 1em;
   border-radius: 29px;
   border: none;
+}
+
+#forum {
+  position: relative;
+  color: var(--font-color-dois);
+  max-width: 100%;
+  width: max-content;
+  height: max-content;
+}
+
+#forum img {
+  max-width: 100%;
+}
+
+#forum div {
+  position: absolute;
+  width: 40%;
+  right: 4em;
+  bottom: 50%;
+  /* Alinha verticalmente ao meio (de baixo pra cima)*/
+  transform: translateY(50%);
+  /* Ajusta a posição vertical (eixo Y, considerando um plano cartesiano)*/
+}
+
+#forum div h3 {
+  margin-bottom: 0.5em;
+}
+
+#forum div p {
+  margin-bottom: 0.5em;
+}
+
+#forum div button {
+  color: var(--font-color-dois);
+  background-color: var(--background-color-sete);
+  border: none;
+  height: 48px;
+  width: 232px;
 }
