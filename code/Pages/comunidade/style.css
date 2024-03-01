@@ -1,0 +1,95 @@
+@import url("../../components/styles/global.css");
+
+main h3 {
+  font-size: 2em;
+}
+
+#mural {
+  position: relative;
+  color: var(--font-color-dois);
+}
+
+#mural div {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 8.5em;
+}
+
+#mural img {
+  max-width: 100vw;
+}
+
+#mural h1 {
+  font-size: 8em;
+}
+
+#mural h3 {
+  font-size: 2em;
+}
+
+#servidor #descricao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 30vh;
+}
+
+#servidor #descricao div {
+  max-width: 60vw;
+}
+
+#servidor #descricao h3 {
+  margin-bottom: 1em;
+}
+
+#servidor #cards {
+  background-color: var(--background-color-dois);
+  color: var(--font-color-dois);
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 1em;
+  padding: 7em;
+  width: 100%;
+  height: min-content;
+}
+
+#servidor .card {
+  position: relative;
+
+}
+
+#servidor .card:nth-child(n) {
+  /*estilo para todos os itens do grid*/
+  grid-column: span 1;
+}
+
+#servidor .card:nth-child(-n+2) {
+  /*estilo para os dois primeiros itens do grid*/
+  grid-column: span 2;
+}
+
+#servidor .card div {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.5em;
+  height: 100%;
+  width: 100%;
+}
+
+#servidor .card img {
+  max-width: 100%;
+}
+
+#servidor .card button {
+  padding: 1em;
+  border-radius: 29px;
+  border: none;
+}
