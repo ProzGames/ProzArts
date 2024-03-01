@@ -104,8 +104,9 @@ main h3 {
 }
 
 #forum {
-  position: relative;
   color: var(--font-color-dois);
+  background-color: var(--background-color-cinco);
+  position: relative;
   max-width: 100%;
 }
 
