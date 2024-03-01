@@ -107,8 +107,6 @@ main h3 {
   position: relative;
   color: var(--font-color-dois);
   max-width: 100%;
-  width: max-content;
-  height: max-content;
 }
 
 #forum img {
@@ -139,4 +137,63 @@ main h3 {
   border: none;
   height: 48px;
   width: 232px;
+}
+
+#comunidade {
+  color: var(--font-color-dois);
+  background-color: var(--background-color-cinco);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+}
+
+#comunidade #cabecalho {
+  width: 50%;
+  padding: 5em;
+  text-align: center;
+}
+
+#comunidade #cabecalho h2 {
+  margin-bottom: 1em;
+}
+
+#comunidade #recursos {
+  background-color: var(--background-color-tres);
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+
+  width: 100%;
+  padding: 4em;
+}
+
+#comunidade #recursos img {
+  max-width: 40%;
+}
+
+#comunidade #recursos div {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%)
+}
+
+#comunidade #recursos h4 {
+  margin-bottom: 1em;
+}
+
+#comunidade #recursos button {
+  border: none;
+  width: 169px;
+  height: 48px;
+  border-radius: 29px;
 }
