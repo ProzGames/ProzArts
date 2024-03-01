@@ -8,33 +8,171 @@
 
 footer {
   background-color: var(--background-color-quatro);
-  color: var(--font-color-secondary);
+  color: var(--font-color-dois);
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
-footer #links-e-configs,
-footer #informacao {
-  width: 100vw;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-footer #links-e-configs div {
-  width: 33%;
+  padding: 8em;
+  padding-top: 2em;
+  font-size: 1.2em;
 }
 
 footer ul {
   list-style: none;
 }
 
-footer a {
-  color: var(--font-color-terciary);
+footer h3 {
+  margin-bottom: 15px;
 }
 
-footer img {
-  max-width: 40px;
+footer a {
+  color: var(--font-color-tres);
+  text-decoration: none;
+}
+
+footer #links-e-configs,
+footer #informacao {
+  display: flex;
+  width: 100%;
+}
+
+footer #links-e-configs {
+  border-bottom: 1px solid var(--font-color-cinco);
+
+  padding-bottom: 1em;
+}
+
+footer #informacao {
+  color: var(--font-color-cinco);
+
+  padding-top: 1em;
+}
+
+footer #links-e-configs #site {
+  width: 40%;
+}
+
+footer #links-e-configs #contato {
+  width: 20%;
+}
+
+footer #links-e-configs #idiomas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 40%;
+}
+
+footer #links-e-configs #idioma {
+  width: 15%;
+}
+
+footer #contato h3 {
+  color: var(--font-color-quatro);
+}
+
+footer #contato a {
+  color: var(--font-color-dois);
+}
+
+footer #links-e-configs aside ul {
+  display: flex;
+}
+
+footer #site ul {
+  justify-content: start;
+}
+
+footer #site h3 {
+  text-align: left;
+}
+
+footer #site li {
+  margin-right: 30px;
+}
+
+footer #contato ul {
+  justify-content: end;
+}
+
+footer #contato h3 {
+  text-align: right;
+}
+
+footer #contato li {
+  margin-left: 30px;
+}
+
+footer #idiomas #caixa-de-idioma {
+  background-color: var(--background-color-cinco);
+
+  width: 75%;
+  max-width: 200px;
+  padding: 10px;
+}
+
+footer #idiomas #caixa-de-idioma label {
+  color: var(--font-color-tres);
+  margin-bottom: 10px;
+  margin-left: 1em;
+}
+
+footer #idiomas #caixa-de-idioma div {
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+}
+
+footer #idiomas #caixa-de-idioma img {
+  max-width: 25px;
+}
+
+footer #idiomas #caixa-de-idioma select {
+  background-color: var(--background-color-cinco);
+  color: white;
+
+  border: none;
+
+  margin-left: 1em;
+  height: 2em;
+  width: 120px;
+}
+
+footer #informacao {
+  text-align: justify;
+}
+
+footer #informacao div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+footer #informacao #links {
+  justify-content: left;
+  align-items: baseline;
+}
+
+footer #informacao #links p {
+  width: 100%;
+}
+
+footer #informacao #imgs {
+  justify-content: right;
+}
+
+footer #informacao #faixa-etaria {
+  max-width: max-content;
+  margin-left: 1.5em;
+}
+
+footer #informacao h1 {
+  background-color: red;
+  color: white;
+  padding: 10px;
 }

@@ -51,13 +51,13 @@ document.querySelector("footer")
   </aside>
   <div id="idiomas">
     <div id="caixa-de-idioma">
-      <p>Language</p>
-      <span>
+      <label for="lg-select">Language</label>
+      <div>
         <img src="${uriDoIndexAtual}images/bd-br.jfif" alt="bandeira do brasil">
-        <select name="" id="">
-          <option value="pt-br">Brazil</option>
+        <select name="lg" id="lg-select">
+          <option value="pt-br">BRASIL</option>
         </select>
-      </span>
+      </div>
     </div>
   </div>
 </div>
@@ -76,7 +76,7 @@ document.querySelector("footer")
     </p>
   </div>
   <div id="imgs">
-    <img id="selo" src="${uriDoIndexAtual}images/seal_PSV_ru_l.svg" alt="selo TRUSTe">
+    <img src="${uriDoIndexAtual}images/seal_PSV_ru_l.svg" alt="selo TRUSTe">
     <div id="faixa-etaria">
       <h1>16</h1>
     </div>
