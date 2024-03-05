@@ -1,3 +1,5 @@
+
+
 const pagina = document.querySelector("title").textContent
 
 //diretorio onde se encontra o html que está usando este componente levando em consideração a araiz do projeto
@@ -5,12 +7,17 @@ var uriDoIndexAtual = "";
 if (pagina === "Inicio") uriDoIndexAtual = "./"
 else uriDoIndexAtual = "../../"
 
-//colocar a localização do html das paginas
-const uriHome = uriDoIndexAtual + "index.html"
-const uriComunidade = uriDoIndexAtual + "pages/comunidade/comunidade.html";
-const uriSobre = uriDoIndexAtual + "pages/Sobre/index.html"
-const uriCompromisso = uriDoIndexAtual + "pages/Compromissos/index.html"
-const uriJogos = uriDoIndexAtual + "pages/jogos/jogos.html"
+//colocar a localização do html das paginas;
+const uriHome = uriDoIndexAtual + "index.html";
+const uriComunidade = uriDoIndexAtual + "pages/comunidade/index.html";
+const uriSobre = uriDoIndexAtual + "pages/Sobre/index.html";
+const uriCompromisso = uriDoIndexAtual + "pages/Compromissos/index.html";
+const uriJogos = uriDoIndexAtual + "pages/jogos/index.html";
+const uriLogin = uriDoIndexAtual + "pages/login/index.html";
+
+function onClickLogin() {
+  window.location.href = uriLogin;
+}
 
 document.querySelector("header")
   .innerHTML = `
@@ -24,7 +31,7 @@ document.querySelector("header")
     </ul>
   </nav>
   <div id="login">
-    <button>LOGIN</button>
+    <button onClick="onClickLogin()">LOGIN</button>
   </div>
 `
 
