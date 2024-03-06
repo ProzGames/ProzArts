@@ -123,6 +123,7 @@ footer #contato a {
 
 footer #links-e-configs aside ul {
   display: flex;
+  gap: 30px;
 }
 
 footer #site ul {
@@ -133,20 +134,12 @@ footer #site h3 {
   text-align: left;
 }
 
-footer #site li {
-  margin-right: 30px;
-}
-
 footer #contato ul {
   justify-content: end;
 }
 
 footer #contato h3 {
   text-align: right;
-}
-
-footer #contato li {
-  margin-left: 30px;
 }
 
 footer #idiomas #caixa-de-idioma {
