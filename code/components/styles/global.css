@@ -7,7 +7,6 @@
 }
 
 header {
-  box-sizing: border-box;
   background-color: var(--background-color-quatro);
 
   display: flex;
@@ -16,6 +15,11 @@ header {
 
   font-size: 1.5em;
   width: 100%;
+}
+
+header h1 {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 header h1 a {
