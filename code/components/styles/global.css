@@ -6,6 +6,10 @@
   margin: 0;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 header {
   background-color: var(--background-color-quatro);
 
