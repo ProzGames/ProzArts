@@ -21,8 +21,22 @@
     --font-size-xxl: 21.8px;
     --font-size-xxxl: 48px;
    
-    --font-family-dhyana-bold: "Dhyana-Bold", Helvetica;
     --font-family-inter: "Inter", Helvetica;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .main {
+    flex-grow: 1;
+    padding: 20px;
+  }
+
+  .main section {
+    margin-bottom: 20px;
   }
 
   .topo {
@@ -32,7 +46,7 @@
     overflow: hidden;
     position: flex;
     top: 136px;
-    width: 1920px;
+    width: 100%;
 }
 
 .topo__banner {
@@ -44,7 +58,7 @@
     overflow: hidden;
     position: absolute;
     top: 9%;
-    width: 1920px;
+    width: 100%;
   }
 
   .topo__banner img {
@@ -162,6 +176,7 @@
     width: 16px;
   }
   
+/* Menu Jogos e DLC */
 
   .menu {
     display: flex;
@@ -171,8 +186,8 @@
     height: 60px;
     left: 0px;
     position: absolute;
-    top: 685px;
-    width: 1920px;
+    top: 600px;
+    width: 100%;
 }
 
 .link {
@@ -258,4 +273,247 @@
   top: -1px;
   white-space: nowrap;
   width: 32px;
+}
+
+/* DIV central */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 400px); /* 3 colunas de 400px */
+  grid-template-rows: repeat(2, 401px); /* 2 linhas de 401px */
+  gap: 20px; /* Espaçamento entre as imagens */
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  padding: 50px;
+}
+
+.image {
+  position: relative;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+}
+
+.image img:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 60px;
+}
+
+/* BANNER */
+
+.newsletter {
+  background-color: #161616c2;
+  height: 642px;
+}
+
+.titulo {
+  background-color: transparent;
+  color: var(--wild-sand);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 400;
+  height: 200px;
+  left: 400px;
+  letter-spacing: 0.00px;
+  line-height: 50px;
+  position: absolute;
+  text-align: left;
+  top: 1700px;
+  width: 474px;
+}
+
+.texto {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  height: 81px;
+  left: 400px;
+  letter-spacing: 0.00px;
+  line-height: 27px;
+  position: absolute;
+  text-align: left;
+  top: 1950px;
+  width: 533px;
+}
+
+.email {
+  background-color: transparent;
+  border: 2px solid;
+  border-color: var(--wild-sand);
+  border-radius: 3px;
+  height: 70px;
+  left: 976px;
+  position: absolute;
+  top: 1700px;
+  width: 544px;
+}
+
+.email__ {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: 15.4px;
+  font-style: normal;
+  font-weight: 400;
+  height: 24px;
+  left: 1000px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 1710px;
+  white-space: nowrap;
+  width: 46px;
+}
+
+.nascimento {
+  background-color: transparent;
+  border: 2px solid;
+  border-color: var(--wild-sand);
+  border-radius: 3px;
+  height: 70px;
+  left: 976px;
+  position: absolute;
+  top: 1800px;
+  width: 256px;
+}
+
+.nascimento__ {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+  height: 24px;
+  left: 1000px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 1810px;
+  white-space: nowrap;
+  width: 140px;
+}
+
+.pais {
+  background-color: transparent;
+  border: 2px solid;
+  border-color: var(--wild-sand);
+  border-radius: 3px;
+  height: 70px;
+  left: 1264px;
+  position: absolute;
+  top: 1800px;
+  width: 256px;
+}
+
+.pais__ {
+  background-color: transparent;
+  color: var(--delta);
+  font-family: var(--font-family-inter);
+  font-size: 12.2px;
+  font-style: normal;
+  font-weight: 400;
+  height: 14px;
+  left: 1296px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: 1810px;
+  white-space: nowrap;
+  width: 24px;
+}
+
+.seleciona {
+  background-color: transparent;
+  color: var(--wild-sand);
+  font-family: var(--font-family-inter);
+  font-size: 16.6px;
+  font-style: normal;
+  font-weight: 400;
+  height: 27px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 27px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 123px;
+}
+
+.checkbox {
+  background-color: transparent;
+  height: 28px;
+  object-fit: cover;
+  position: relative;
+  width: 18px;
+  top: 8px;
+}
+
+.texto__checkbox {
+  background-color: transparent;
+  color: transparent;
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 105px;
+  left: 1010px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 1940px;
+  width: 507px;
+}
+
+.termos {
+  color: var(--wild-sand);
+  font-style: normal;
+}
+
+.termos1 {
+  color: var(--tango);
+  font-style: normal;
+}
+
+.button {
+  background-color: var(--tango);
+  border: 2px solid;
+  border-color: var(--tango);
+  border-radius: 3px;
+  height: 66px;
+  left: 976px;
+  position: absolute;
+  top: 2050px;
+  width: 168px;
+}
+
+.texto__  {
+  background-color: transparent;
+  color: var(--wild-sand);
+  font-family: var(--font-family-inter);
+  font-size: 16.6px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.00px;
+  line-height: 60px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  margin-left: 20px;
 }
