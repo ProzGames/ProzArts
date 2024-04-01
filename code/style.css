@@ -56,8 +56,7 @@
     height: 549px;
     left: 0px;
     overflow: hidden;
-    position: absolute;
-    top: 9%;
+    position: relative;
     width: 100%;
   }
 
@@ -435,6 +434,16 @@
   top: 1810px;
   white-space: nowrap;
   width: 24px;
+}
+
+#primeira {
+  background-color: transparent;
+  height: 27px;
+  left: 1296px;
+  overflow: hidden;
+  position: absolute;
+  top: 1939px;
+  width: 171px;
 }
 
 .seleciona {
