@@ -1,8 +1,4 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+@import url("../../components/styles/global.css");
 
 main {
     width: 100%;
@@ -20,21 +16,21 @@ main {
     --vermelho: #FF4747;
 }
 
-.banner{
+.banner {
     width: 100%;
     height: 64vh;
     display: flex;
-    background-image: url("../../images/BannerSobre.svg") ;
-    background-size:cover;
+    background-image: url("../../images/BannerSobre.svg");
+    background-size: cover;
     color: var(--branco);
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-size:xx-large;
+    font-size: xx-large;
 }
 
 
-.sobre{
+.sobre {
     width: 100%;
     height: 62vh;
     background-image: url("../../images/img_Sobre.svg");
@@ -42,7 +38,7 @@ main {
     display: flex;
 }
 
-.textoSobre{
+.textoSobre {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -52,15 +48,15 @@ main {
 }
 
 
-.textoSobre>p{
+.textoSobre>p {
     width: 50%;
-    font-size:15px;
+    font-size: 15px;
     margin-top: 1.5%;
 }
 
-.descubra{
+.descubra {
     width: 100%;
-    height:100%;
+    height: 100%;
     background-color: var(--cinza);
     display: flex;
     justify-content: center;
@@ -68,7 +64,7 @@ main {
     /*font-size: x-large;*/
 }
 
-.descubraJogos{
+.descubraJogos {
     width: 100%;
     margin-top: 5%;
     display: flex;
@@ -76,20 +72,20 @@ main {
     flex-direction: column;
 }
 
-.imagensJogos{
+.imagensJogos {
     width: 100%;
     margin-top: 1%;
     display: flex;
     justify-content: center;
 }
 
-.imagensJogos>img{
-    width: 30% ;
+.imagensJogos>img {
+    width: 30%;
     height: 20%;
 }
 
 
-.pessoalPraticas{
+.pessoalPraticas {
     width: 100%;
     height: 55vh;
     margin-top: 6%;
@@ -100,7 +96,7 @@ main {
 
 
 
-.textoPessoal{
+.textoPessoal {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -109,34 +105,34 @@ main {
     padding: 6px;
 }
 
-.textoPessoal>p{
+.textoPessoal>p {
     margin-top: 3%;
 }
 
 
 
-.textoPraticas{
+.textoPraticas {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-right:14%;
+    margin-right: 14%;
     margin-left: 1%;
     padding: 6px;
 }
 
-.textoPraticas>p{
+.textoPraticas>p {
     margin-top: 3%;
 }
 
 
-.textoPessoalSublinhado{
+.textoPessoalSublinhado {
     display: flex;
-    text-decoration:underline;
+    text-decoration: underline;
     justify-content: space-between;
     margin-top: 2.3%;
 }
 
-.nossosValores{
+.nossosValores {
     width: 100%;
     height: 62vh;
     background-color: var(--cinzaEscuro);
@@ -147,18 +143,18 @@ main {
     justify-content: space-around;
 }
 
-.nossosValores>h2{
+.nossosValores>h2 {
     color: var(--branco);
     font-size: x-large;
 }
 
 
-.cardsValores{
+.cardsValores {
     width: 100%;
     display: flex;
 }
 
-.cardValores{
+.cardValores {
     height: 98%;
     width: 50%;
     background-color: var(--branco);
@@ -167,20 +163,20 @@ main {
     margin-right: 0.6%;
 }
 
-.cardValores>p{
+.cardValores>p {
     margin-top: 6%;
     margin-bottom: 5%;
 }
 
-.scrollbar>img{
+.scrollbar>img {
     width: 45%;
     height: 40%;
 }
 
 
-.noticiasRecentes{
+.noticiasRecentes {
     width: 100vw;
-    height:100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -188,58 +184,58 @@ main {
 
 }
 
-.noticiasRecentes>h3{
+.noticiasRecentes>h3 {
     margin-top: 6%;
     font-size: x-large;
 
 }
 
 
-.cardsNoticias{
+.cardsNoticias {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.cardNoticia{
+.cardNoticia {
     height: 100%;
     width: 15%;
-    box-shadow: 3px 8px 27px -6px rgba(0,0,0,0.3);
+    box-shadow: 3px 8px 27px -6px rgba(0, 0, 0, 0.3);
     margin-left: 0.3%;
     margin-right: 0.3%;
     padding-bottom: 0.5%;
 }
 
-.cardNoticia>img{
+.cardNoticia>img {
     width: 100%;
 }
 
-.cardNoticiaData{
+.cardNoticiaData {
     display: flex;
     justify-content: space-between;
     font-size: 11px;
     margin-right: 16%;
 }
 
-#ArtigoVermelho{
+#ArtigoVermelho {
     color: var(--vermelho);
 }
 
-.cardNoticiaTexto{
+.cardNoticiaTexto {
     padding: 6%;
 }
 
-.cardNoticiaTexto>h4{
+.cardNoticiaTexto>h4 {
     margin-top: 3%;
     margin-bottom: 3%;
-    font-size:medium;
+    font-size: medium;
 }
 
-#cardNoticiaDescricao{
+#cardNoticiaDescricao {
     font-size: 13.4px;
 }
 
-.carregar{
+.carregar {
     width: 47%;
     height: 13%;
     border: solid 1px var(--cinza);
@@ -251,12 +247,12 @@ main {
     color: var(--cinzaLeve);
 }
 
-.carregar>img{
+.carregar>img {
     width: 4%;
     margin-bottom: 1%;
 }
 
-.informacoes{
+.informacoes {
     width: 100%;
     height: 55vh;
     background-color: var(--cinza);
@@ -267,14 +263,14 @@ main {
     justify-content: space-around;
 }
 
-.informacoes>h3{
+.informacoes>h3 {
     margin-top: 3%;
     font-size: x-large;
     margin-right: 30.6%;
     margin-bottom: 1%;
 }
 
-.textoInformacoes{
+.textoInformacoes {
     width: 50%;
     height: 100%;
     display: flex;
@@ -283,21 +279,21 @@ main {
 
 }
 
-.tituloTextoInformacoes{
+.tituloTextoInformacoes {
     height: 100%;
-    width:26%;
+    width: 26%;
 }
 
-.tituloTextoInformacoes>p{
+.tituloTextoInformacoes>p {
     font-weight: bold;
     margin-bottom: 2%;
 }
 
-.descricaoTextoInformacoes{
+.descricaoTextoInformacoes {
     height: 100%;
-    width:72%;
+    width: 72%;
 }
 
-.descricaoTextoInformacoes>p{
+.descricaoTextoInformacoes>p {
     margin-bottom: 2%;
 }

@@ -1,8 +1,4 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+@import url("../../components/styles/global.css");
 
 main {
     width: 100%;
@@ -17,91 +13,91 @@ main {
     --cinzaLeve: #A3A3A3;
     --cinza: #EAEAEA;
     --cinzaEscuro: #4E4E4E;
-    --cinzalevinho:#F3F3F3;
+    --cinzalevinho: #F3F3F3;
     --vermelho: #FF4747;
     --Azul: #032044;
 }
 
-.banner{
+.banner {
     width: 100%;
     height: 25vh;
     display: flex;
-    background-image: url("../../images/BannerCompromisso.svg") ;
-    background-size:cover;
+    background-image: url("../../images/BannerCompromisso.svg");
+    background-size: cover;
     color: var(--branco);
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-size:x-large;
+    font-size: x-large;
 }
 
-.conteudo{
+.conteudo {
     width: 100%;
-    height:100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom:10%;
+    margin-bottom: 10%;
 }
 
-.conteudo>p{
+.conteudo>p {
     width: 50%;
     height: 100%;
-    font-size:15px;
+    font-size: 15px;
     margin-top: 5%;
     margin-bottom: 5%;
 }
 
-.painelCards{
+.painelCards {
     width: 100%;
     height: 550px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     margin-top: 3%;
-    
+
 }
 
-.painelCardsDivi{
+.painelCardsDivi {
     width: 100%;
-    height:100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     margin-top: 1.5%;
 }
 
-.card{
+.card {
     height: 100%;
     width: 15%;
-    
+
     margin-left: 0.3%;
     margin-right: 0.3%;
     padding-bottom: 0.5%;
     background-color: var(--cinzalevinho);
 }
 
-.card>img{
+.card>img {
     width: 100%;
 }
 
-.cardTexto>h4{
+.cardTexto>h4 {
     margin-top: 3%;
     margin-bottom: 4%;
-    font-size:large;
+    font-size: large;
 }
 
-.cardTexto{
+.cardTexto {
     padding: 5%;
 }
 
-#cardDescricao{
+#cardDescricao {
     font-size: 14px;
 }
 
 
-.leiaMais{
+.leiaMais {
     width: 100%;
     height: 28vh;
     background-color: var(--cinzaEscuro);
@@ -112,17 +108,18 @@ main {
     justify-content: center;
 }
 
-.leiaMais>h2{
+.leiaMais>h2 {
     color: var(--branco);
     font-size: xx-large;
 }
 
-.cardleiaMais{
+.cardleiaMais {
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.cardleiaMais>button{
+
+.cardleiaMais>button {
     padding: 0.75%;
     margin-top: 1%;
     margin-left: 0.5%;
@@ -131,7 +128,7 @@ main {
     border-radius: 2px;
 }
 
-.relatorioProgresso{
+.relatorioProgresso {
     width: 100%;
     height: 60vh;
     display: flex;
@@ -139,7 +136,7 @@ main {
     align-items: center;
 }
 
-.relatorioImpacto{
+.relatorioImpacto {
     height: 100%;
     width: 50vw;
     display: flex;
@@ -148,17 +145,17 @@ main {
     text-align: center;
 }
 
-.relatorioImpacto>h2{
+.relatorioImpacto>h2 {
     font-size: xx-large;
 }
 
-.relatorioImpacto>p{
+.relatorioImpacto>p {
     margin-top: 2%;
     margin-bottom: 2%;
     font-size: 15px;
 }
 
-.cardrelatorioImpacto>button{
+.cardrelatorioImpacto>button {
     padding-top: 1%;
     padding-bottom: 1%;
     padding-right: 2%;
@@ -166,29 +163,29 @@ main {
     margin-top: 1%;
     margin-left: 0.5%;
     margin-right: 0.5%;
-    
+
 }
 
-#botaoBranco{
+#botaoBranco {
     background-color: var(--branco);
     border-radius: 3px;
 }
 
-#botaoAzul{
+#botaoAzul {
     background-color: var(--Azul);
     border-color: var(--Azul);
     border-radius: 3px;
     color: var(--branco);
 }
 
-.relatorioProgresso>img{
+.relatorioProgresso>img {
     width: 50vw;
     height: 50vh;
-    
+
 }
 
 
-.relatorioAnteriores{
+.relatorioAnteriores {
     width: 100%;
     height: 30vh;
     display: flex;
@@ -197,18 +194,18 @@ main {
     flex-direction: column;
 }
 
-.relatorioAnteriores>h4{
+.relatorioAnteriores>h4 {
     font-size: larger;
 }
 
-.cardrelatorioAnteriores{
+.cardrelatorioAnteriores {
     width: 100%;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     margin: 1.2%;
 }
 
-.cardrelatorioAnteriores>button{
+.cardrelatorioAnteriores>button {
     padding-top: 0.6%;
     padding-bottom: 0.6%;
     padding-right: 1.8%;
