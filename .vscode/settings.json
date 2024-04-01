@@ -1,3 +1,4 @@
 {
-  "livePreview.defaultPreviewPath": "/code/index.html"
+  "livePreview.defaultPreviewPath": "/code/index.html",
+  "editor.linkedEditing": true
 }

@@ -1,1 +1,261 @@
 @import url('./components/styles/global.css');
+@import url("https://fonts.googleapis.com/css?family=Inter:400,900");
+
+* {
+    box-sizing: border-box;
+  }
+  
+  :root { 
+    --black: #000000;
+    --black-2: #00000014;
+    --delta: #a3a3a3;
+    --tango: #f17f1a;
+    --white: #ffffff;
+    --wild-sand: #f3f3f3;
+   
+    --font-size-l: 16.7px;
+    --font-size-m: 16px;
+    --font-size-s: 14.9px;
+    --font-size-xl: 20px;
+    --font-size-xs: 14.8px;
+    --font-size-xxl: 21.8px;
+    --font-size-xxxl: 48px;
+   
+    --font-family-dhyana-bold: "Dhyana-Bold", Helvetica;
+    --font-family-inter: "Inter", Helvetica;
+  }
+
+  .topo {
+    background-color: transparent;
+    height: 549px;
+    left: 0px;
+    overflow: hidden;
+    position: flex;
+    top: 136px;
+    width: 1920px;
+}
+
+.topo__banner {
+    background-color: transparent;
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 549px;
+    left: 0px;
+    overflow: hidden;
+    position: absolute;
+    top: 9%;
+    width: 1920px;
+  }
+
+  .topo__banner img {
+    max-width:1920px;
+    max-height:549px;
+    width: auto;
+    height: auto;
+}
+  
+  .topo__logo {
+    background-color: transparent;
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 110px;
+    left: 400px;
+    overflow: hidden;
+    position: absolute;
+    top: 141px;
+    width: 300px;
+  }
+
+  .topo__logo img {
+    max-width:300px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+}
+  
+  .topo__titulo {
+    background-color: transparent;
+    color: var(--wild-sand);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-xxl);
+    font-style: normal;
+    font-weight: 400;
+    height: 56px;
+    left: 400px;
+    letter-spacing: 0.00px;
+    line-height: 32.4px;
+    position: absolute;
+    text-align: left;
+    top: 254px;
+    width: 520px;
+  }
+
+  .topo__btn__texto {
+    background-color: transparent;
+    color: var(--wild-sand);
+    font-family: var(--font-family-inter);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    height: 19px;
+    left: 450px;
+    letter-spacing: 0.00px;
+    position: flex;
+    text-align: left;
+    top: 359px;
+    white-space: nowrap;
+    width: 60px;    
+  }
+
+  .topo__btn {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin-top: 20px;
+    border-radius: 3px;
+    height: 59px;
+    position: absolute;
+    top: 340px;
+    width: 160px;
+    background-color: var(--tango);
+    left: 400px;
+  }
+    
+  .topo__video {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin-top: 20px;
+    border-radius: 3px;
+    height: 59px;
+    position: absolute;
+    top: 340px;
+    width: 160px;
+    background-color: transparent;
+    border: 2px solid;
+    border-color: var(--wild-sand);
+    left: 584px;
+  }
+  
+  .topo__video__texto {
+    background-color: transparent;
+    color: var(--wild-sand);
+    font-family: var(--font-family-inter);
+    font-size: 16.9px;
+    font-style: normal;
+    font-weight: 400;
+    left: 613px;
+    letter-spacing: 0.00px;
+    line-height: 27px;
+    text-align: left;
+    top: 355px;
+    white-space: nowrap;
+    width: 78px;
+  }
+  
+  .icon {
+    background-color: transparent;
+    height: 16px;
+    left: 699px;
+    object-fit: cover;
+    top: 362px;
+    width: 16px;
+  }
+  
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f1f1f1;
+    height: 60px;
+    left: 0px;
+    position: absolute;
+    top: 685px;
+    width: 1920px;
+}
+
+.link {
+  background-color: transparent;
+  height: 60px;
+  left: 340px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 1240px;
+}
+
+.opcao {
+  background-color: var(--black-2);
+  height: 60px;
+  left: 60px;
+  position: absolute;
+  top: 0px;
+  width: 79px;
+}
+
+.link__jogo {
+  background-color: transparent;
+  border-bottom-style: none;
+  border-color: var(--black-2);
+  border-left-style: none;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-style: none;
+  height: 27px;
+  left: 0px;
+  position: absolute;
+  top: 15px;
+  width: 79px;
+}
+
+.jogo {
+  background-color: transparent;
+  color: #161616cc;
+  font-family: var(--font-family-inter);
+  font-size: 16.6px;
+  font-style: normal;
+  font-weight: 400;
+  height: 27px;
+  left: 15px;
+  letter-spacing: 0.00px;
+  line-height: 27px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 48px;
+}
+
+.link__dlc {
+  background-color: transparent;
+  border-bottom-style: none;
+  border-color: var(--black-2);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-style: none;
+  border-top-style: none;
+  height: 27px;
+  left: 139px;
+  position: absolute;
+  top: 15px;
+  width: 63px;
+}
+
+.dlc {
+  background-color: transparent;
+  color: #161616;
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 27px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 27px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 32px;
+}
