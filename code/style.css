@@ -279,9 +279,9 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 400px); /* 3 colunas de 400px */
-  grid-template-rows: repeat(2, 401px); /* 2 linhas de 401px */
-  gap: 20px; /* Espaçamento entre as imagens */
+  grid-template-columns: repeat(3, 400px); 
+  grid-template-rows: repeat(2, 401px); 
+  gap: 20px; 
   justify-content: center;
   align-items: center;
   background-color: #eaeaea;
