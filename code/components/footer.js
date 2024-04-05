@@ -10,8 +10,8 @@ else uriDoIndexAtual = "../../"
 //colocar a localização do html das paginas;
 const uriHome = uriDoIndexAtual + "index.html";
 const uriComunidade = uriDoIndexAtual + "pages/comunidade/index.html";
-const uriSobre = uriDoIndexAtual + "pages/Sobre/index.html";
-const uriCompromisso = uriDoIndexAtual + "pages/Compromissos/index.html";
+const uriSobre = uriDoIndexAtual + "pages/sobre/index.html";
+const uriCompromisso = uriDoIndexAtual + "pages/compromissos/index.html";
 const uriJogos = uriDoIndexAtual + "pages/jogos/index.html";
 const uriLogin = uriDoIndexAtual + "pages/login/index.html";
 
