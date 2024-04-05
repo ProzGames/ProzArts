@@ -1,6 +1,6 @@
 # Proz Arts
 
-Este é um projeto simples que o objetivo de usar todo o conhecimento obtido pelos alunos no curso Talentos Cloud envolvendo a triade da web: HTML, CSS e JavaScript.
+Este é um projeto simples com o objetivo de usar todo o conhecimento obtido pelos alunos no curso Talentos Cloud envolvendo a triade da web: HTML, CSS e JavaScript e comandos com git e git flow.
 
 ## contribuidores
 
