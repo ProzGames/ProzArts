@@ -12,7 +12,7 @@ const montarMenuBar = () => {
   const uriCompromisso = localizacao_da_raiz() + "pages/compromissos/index.html";
   const uriJogos = localizacao_da_raiz() + "pages/jogos/index.html";
   const uriComunidade = localizacao_da_raiz() + "pages/comunidade/index.html";
-  const nav = document.createElement("div")
+  const nav = document.createElement("nav")
 
   const links_das_paginas = document.createElement("ul")
   links_das_paginas.id = "links-pages"

@@ -14,35 +14,32 @@ header {
   background-color: var(--background-color-quatro);
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
   font-size: 1.5em;
   width: 100%;
 }
 
-header h1 {
-  padding-top: 15px;
-  padding-bottom: 15px;
+header h1{
+  margin-left: 60px;
+  width: 280px;
 }
 
-header h1 a {
-  padding-left: 30px;
+header nav{
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 80%;
 }
 
-header ul {
+header ul{
   list-style: none;
-  display: flex;
-  justify-content: space-evenly;
+  margin-left: 40px;
 
-  padding: 10px;
-  width: 50vw;
-}
-
-header #login {
-  width: 25vw;
   display: flex;
-  justify-content: end;
+  align-items: center;
+  gap: 30px;
 }
 
 header a {
@@ -55,7 +52,7 @@ header button {
   color: var(--font-color-dois);
 
   border: none;
-  margin-right: 30px;
+  margin-right: 40px;
   padding: 10px;
   width: 131px;
 }
