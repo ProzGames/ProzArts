@@ -1,19 +1,17 @@
-const raiz = localizacao_da_raiz()
-
-const uriHome = raiz + "index.html";
-const uriSobre = raiz + "pages/sobre/index.html";
-const uriCompromisso = raiz + "pages/compromissos/index.html";
-const uriJogos = raiz + "pages/jogos/index.html";
-const uriComunidade = raiz + "pages/comunidade/index.html";
-const uriLogin = () => {window.location.href = raiz + "pages/login/index.html"};
+const uriLogin = () => {window.location.href = localizacao_da_raiz() + "pages/login/index.html"};
 
 const montarLogo = () => {
+  const uriHome = localizacao_da_raiz() + "index.html";
   const logo = document.createElement("h1")
   logo.innerHTML = `<a href="${uriHome}">Proz Arts</a>`
   return logo
 }
 
 const montarMenuBar = () => {
+  const uriSobre = localizacao_da_raiz() + "pages/sobre/index.html";
+  const uriCompromisso = localizacao_da_raiz() + "pages/compromissos/index.html";
+  const uriJogos = localizacao_da_raiz() + "pages/jogos/index.html";
+  const uriComunidade = localizacao_da_raiz() + "pages/comunidade/index.html";
   const nav = document.createElement("div")
 
   const links_das_paginas = document.createElement("ul")
@@ -34,6 +32,10 @@ const montarMenuBar = () => {
   return nav
 }
 
-const header = document.querySelector("header");
-header.appendChild(montarLogo())
-header.appendChild(montarMenuBar())
+function montarHeader(){
+  const header = document.querySelector("header");
+  header.appendChild(montarLogo())
+  header.appendChild(montarMenuBar())
+}
+
+montarHeader()

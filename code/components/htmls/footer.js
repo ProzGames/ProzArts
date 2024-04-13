@@ -1,13 +1,8 @@
-//ja esta declarado em arquivo.js que esta sendo carregado na pagina html
-
-// const raiz = localizacao_da_raiz()
-
-// const uriSobre = raiz + "pages/sobre/index.html";
-// const uriCompromisso = raiz + "pages/compromissos/index.html";
-// const uriJogos = raiz + "pages/jogos/index.html";
-// const uriComunidade = raiz + "pages/comunidade/index.html";
-
 function montarAreaAside(){
+  const uriSobre = localizacao_da_raiz() + "pages/sobre/index.html";
+  const uriCompromisso = localizacao_da_raiz() + "pages/compromissos/index.html";
+  const uriJogos = localizacao_da_raiz() + "pages/jogos/index.html";
+  const uriComunidade = localizacao_da_raiz() + "pages/comunidade/index.html";
   const div_links = document.createElement("div")
   div_links.id = "links-e-configs"
   div_links.innerHTML = `
@@ -34,7 +29,7 @@ function montarAreaAside(){
     <div id="caixa-de-idioma">
       <label for="lg-select">Language</label>
       <div>
-        <img src="${raiz}images/bd-br.jfif" alt="bandeira do brasil">
+        <img src="${localizacao_da_raiz()}images/bd-br.jfif" alt="bandeira do brasil">
         <select name="lg" id="lg-select">
           <option value="pt-br">BRASIL</option>
         </select>
@@ -63,7 +58,7 @@ function montarAreaInformativa(){
     </p>
   </div>
   <div id="imgs">
-    <img src="${raiz}images/seal_PSV_ru_l.svg" alt="selo TRUSTe">
+    <img src="${localizacao_da_raiz()}images/seal_PSV_ru_l.svg" alt="selo TRUSTe">
     <div id="faixa-etaria">
       <h1>16</h1>
     </div>
@@ -72,6 +67,10 @@ function montarAreaInformativa(){
   return div_informacoes;
 }
 
-const footer = document.querySelector("footer")
-footer.appendChild(montarAreaAside())
-footer.appendChild(montarAreaInformativa())
+function montarFooter(){
+  const footer = document.querySelector("footer")
+  footer.appendChild(montarAreaAside())
+  footer.appendChild(montarAreaInformativa())
+}
+
+montarFooter()
