@@ -22,13 +22,23 @@ const montarMenuBar = () => {
     <li><a href="${uriJogos}">Jogos</a></li>
     <li><a href="${uriComunidade}">Comunidade</a></li>
   `
-  nav.appendChild(links_das_paginas)
+  //para mobile
+  const iFontAewsome = document.createElement("i")
+  iFontAewsome.classList.add("fa-solid")
+  iFontAewsome.classList.add("fa-bars")
+  iFontAewsome.id = "icon-menu-mobile"
+  const div_mobile = document.createElement("div")
+  div_mobile.id = "opcoes-para-menu-mobile"
+  div_mobile.appendChild(iFontAewsome)
+  div_mobile.appendChild(links_das_paginas)
+  nav.appendChild(div_mobile)
 
   const btn_login = document.createElement("button")
   btn_login.onclick = uriLogin
   btn_login.innerText = "LOGIN"
   nav.appendChild(btn_login)
 
+  console.log(nav.textContent)
   return nav
 }
 

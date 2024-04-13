@@ -29,6 +29,7 @@ header h1{
 header nav{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 100%;
   width: 80%;
 }
@@ -55,6 +56,10 @@ header button {
   margin-right: 40px;
   padding: 10px;
   width: 131px;
+}
+
+#icon-menu-mobile{
+  display: none;
 }
 
 footer {
