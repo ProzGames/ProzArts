@@ -60,6 +60,9 @@ header button {
 
 #icon-menu-mobile{
   display: none;
+  color: white;
+  font-size: 1.5em;
+  padding-right: 40px;
 }
 
 footer {
@@ -220,4 +223,41 @@ footer #informacao h1 {
   background-color: red;
   color: white;
   padding: 10px;
+}
+
+/*responsividade*/
+@media(max-width:1093px){
+  header nav {
+    flex-direction: row-reverse;
+    width: 50%;
+  }
+
+  header ul{
+    display: none;
+  }
+
+  header button{
+    margin: 0;
+    margin-left: 40px;
+  }
+
+  header #icon-menu-mobile{
+    display: block;
+  }
+
+  header #opcoes-para-menu-mobile{
+    position: relative;
+  }
+
+  header #opcoes-para-menu-mobile:hover ul{
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    background-color: var(--background-color-quatro);
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px 10px 10px 10px;
+  }
 }
