@@ -14,35 +14,33 @@ header {
   background-color: var(--background-color-quatro);
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
   font-size: 1.5em;
   width: 100%;
 }
 
-header h1 {
-  padding-top: 15px;
-  padding-bottom: 15px;
+header h1{
+  margin-left: 60px;
+  width: 280px;
 }
 
-header h1 a {
-  padding-left: 30px;
+header nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 80%;
 }
 
-header ul {
+header ul{
   list-style: none;
-  display: flex;
-  justify-content: space-evenly;
+  margin-left: 40px;
 
-  padding: 10px;
-  width: 50vw;
-}
-
-header #login {
-  width: 25vw;
   display: flex;
-  justify-content: end;
+  align-items: center;
+  gap: 30px;
 }
 
 header a {
@@ -55,9 +53,16 @@ header button {
   color: var(--font-color-dois);
 
   border: none;
-  margin-right: 30px;
+  margin-right: 40px;
   padding: 10px;
   width: 131px;
+}
+
+#icon-menu-mobile{
+  display: none;
+  color: white;
+  font-size: 1.5em;
+  padding-right: 40px;
 }
 
 footer {
@@ -218,4 +223,41 @@ footer #informacao h1 {
   background-color: red;
   color: white;
   padding: 10px;
+}
+
+/*responsividade*/
+@media(max-width:1093px){
+  header nav {
+    flex-direction: row-reverse;
+    width: 50%;
+  }
+
+  header ul{
+    display: none;
+  }
+
+  header button{
+    margin: 0;
+    margin-left: 40px;
+  }
+
+  header #icon-menu-mobile{
+    display: block;
+  }
+
+  header #opcoes-para-menu-mobile{
+    position: relative;
+  }
+
+  header #opcoes-para-menu-mobile:hover ul{
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    background-color: var(--background-color-quatro);
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px 10px 10px 10px;
+  }
 }
