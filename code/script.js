@@ -77,4 +77,5 @@ document.addEventListener("DOMContentLoaded", function() {
       return regexEmail.test(email);
     }
   });
+
   

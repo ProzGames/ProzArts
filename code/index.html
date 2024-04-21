@@ -7,6 +7,7 @@
   <script src="./components/funcoesGlobais.js"></script>
   <script src="./components/load/estilosExternos.js"></script>
   <script src="./components/load/componentsHTML.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-Q2l2HveJ5dMYYCkgBK4U0UvTrNJw89BgndKp3jj4JzFf0TJGFiIOqm0s1XZRDdKiu1Bw6MMjvG8Dx8JZI9HKgw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Inicio</title>
 </head>
 
@@ -15,27 +16,33 @@
 
   <main>
     <section class="topo">
-      <div class="topo__banner">
-        <img src="./images/background_home_top.png" alt="Capa Battlefield" />
+      <div class="topo__banner" id="banner">
+        <video id="videoPlayer" style="display: none;">
+          <source src="https://cdn.akamai.steamstatic.com/steam/apps/256806061/movie_max_vp9.webm?t=1603387370" type="video/mp4">
+          Seu navegador não suporta o elemento de vídeo.
+        </video>
+        <img id="bannerImage" src="./images/background_home_top.png" alt="Capa Battlefield" />
       </div>
       <div class="topo__logo">
         <img src="./images/logo_battlefield_V.png" alt="Logo Battlefield" />
       </div>
       <p class="topo__titulo">
-        JOGUE BATTLEFIELD&trade; V AGORA PARA XBOX ONE,<br />PLAYSTATION&reg;4 E PC
+        JOGUE BATTLEFIELD&trade; V AGORA PARA XBOX ONE,<br />PLAYSTATION&reg; 4 E PC
       </p>
 
       <div class="topo__btn">
-        <a class="topo__btn__texto">Explore</a>
+        <button class="topo__btn__texto" onclick="window.open('https://store.steampowered.com/app/1238810/Battlefield_V/', '_blank');">Explore</button>
       </div>
 
       <div class="topo__video">
-        <a class="topo__video__texto">Ver trailer</a>
-        <img class="icon" src="./images/iconPlay.svg" alt="Icone Play">
+        <button id="verTrailerButton" class="topo__video__texto">
+          <i id="verTrailerButton" class="fas fa-play"></i>
+          Ver trailer          
+        </button>
       </div>
     </section>
 
-    <section class="menu">
+    <section class="menu" id="nextSection">
       <div class="link">
         <div class="opcao">
           <div class="link__jogo">
@@ -109,7 +116,7 @@
         
         <button id="closeButton" aria-label="Fechar" title="Fechar newsletter">X</button>       
       </div>
-      <div>
+      <form>
         <p class="texto__checkbox">
           <input class="checkbox" type="checkbox" />
           <span>
@@ -123,7 +130,7 @@
         <div class="button">
           <button class="texto__" type="submit">INSCREVER-SE</button>
         </div>
-      </form> 
+      </form>
       </div>
       
     </div>
@@ -133,6 +140,7 @@
 
   <footer></footer>
   <script src="./script.js"></script>
+  <script src="./btn.js"></script>
 </body>
 
 </html>
