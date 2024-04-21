@@ -423,10 +423,10 @@
   color: var(--delta);
   font-family: var(--font-family-inter);
   font-size: 12.2px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 400;
   height: 14px;
-  left: 1296px;
+  left: 1285px;
   letter-spacing: 0.00px;
   line-height: 14px;
   position: absolute;
@@ -436,19 +436,9 @@
   width: 24px;
 }
 
-#primeira {
-  background-color: transparent;
-  height: 27px;
-  left: 1296px;
-  overflow: hidden;
-  position: absolute;
-  top: 1939px;
-  width: 171px;
-}
-
 .seleciona {
   background-color: transparent;
-  color: var(--wild-sand);
+  color: var(--tango);
   font-family: var(--font-family-inter);
   font-size: 16.6px;
   font-style: normal;
@@ -462,6 +452,16 @@
   top: -1px;
   white-space: nowrap;
   width: 123px;
+}
+
+#primeiro {
+  background-color: transparent;
+  border-color: #eaeaea;
+  color: var(--wild-sand);
+  font-family: var(--font-family-inter);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .checkbox {
