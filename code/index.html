@@ -83,7 +83,7 @@
   </section>
 
     <section class="newsletter__">
-      <div class="newsletter">
+      <div class="newsletter" id="newsletterBanner">
       <h1 class="titulo">
         INSCREVA-SE PARA<br />RECEBER AS<br />NOTÍCIAS DE<br />Proz Arts™
       </h1>
@@ -94,9 +94,9 @@
       </p>
       <div class="">
         <form>
-          <input class="email" type="text" id="texto" name="texto" />
+          <input class="email" type="text" id="texto" name="texto" placeholder="email@email.com" />
           <p class="email__">E-mail:</p><br />
-          <input class="nascimento" type="text" id="texto" name="texto" />
+          <input class="nascimento" type="text" id="dataNascimento" name="dataNascimento" placeholder="DD MM AAAA"/>
           <p class="nascimento__">Data de Nascimento:</p><br />
           
           <select class="pais" id="primeiro">
@@ -106,7 +106,8 @@
           </select>
           <p class="pais__">País:</p>
           <br />                    
-        </form>        
+        
+        <button id="closeButton" aria-label="Fechar" title="Fechar newsletter">X</button>       
       </div>
       <div>
         <p class="texto__checkbox">
@@ -120,15 +121,18 @@
           </span>
         </p>
         <div class="button">
-          <a class="texto__">INSCREVER-SE</a>
+          <button class="texto__" type="submit">INSCREVER-SE</button>
         </div>
+      </form> 
       </div>
+      
     </div>
   </section>
 
   </main>
 
   <footer></footer>
+  <script src="./script.js"></script>
 </body>
 
 </html>

@@ -307,9 +307,14 @@
 
 /* BANNER */
 
+.newsletter__ {
+  position: relative;
+}
+
 .newsletter {
+
   background-color: #161616c2;
-  height: 642px;
+  height: 550px;
 }
 
 .titulo {
@@ -325,7 +330,7 @@
   line-height: 50px;
   position: absolute;
   text-align: left;
-  top: 1700px;
+  top: 100px;
   width: 474px;
 }
 
@@ -336,13 +341,13 @@
   font-size: var(--font-size-l);
   font-style: normal;
   font-weight: 400;
-  height: 81px;
+  height: 80px;
   left: 400px;
   letter-spacing: 0.00px;
   line-height: 27px;
   position: absolute;
   text-align: left;
-  top: 1950px;
+  top: 350px;
   width: 533px;
 }
 
@@ -354,7 +359,7 @@
   height: 70px;
   left: 976px;
   position: absolute;
-  top: 1700px;
+  top: 100px;
   width: 544px;
 }
 
@@ -366,14 +371,24 @@
   font-style: normal;
   font-weight: 400;
   height: 24px;
-  left: 1000px;
+  left: 995px;
   letter-spacing: 0.00px;
   line-height: 24px;
   position: absolute;
   text-align: left;
-  top: 1710px;
+  top: 105px;
   white-space: nowrap;
   width: 46px;
+}
+
+#texto {
+  background-color: transparent;
+  color: var(--delta);
+  font-family: var(--font-family-inter);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  padding: 12px 0 0 25px;
 }
 
 .nascimento {
@@ -384,7 +399,7 @@
   height: 70px;
   left: 976px;
   position: absolute;
-  top: 1800px;
+  top: 190px;
   width: 256px;
 }
 
@@ -396,14 +411,23 @@
   font-style: normal;
   font-weight: 400;
   height: 24px;
-  left: 1000px;
+  left: 995px;
   letter-spacing: 0.00px;
   line-height: 24px;
   position: absolute;
   text-align: left;
-  top: 1810px;
+  top: 195px;
   white-space: nowrap;
-  width: 140px;
+}
+
+#dataNascimento {
+  background-color: transparent;
+  color: var(--delta);
+  font-family: var(--font-family-inter);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  padding: 12px 0 0 25px;
 }
 
 .pais {
@@ -414,26 +438,26 @@
   height: 70px;
   left: 1264px;
   position: absolute;
-  top: 1800px;
+  top: 190px;
   width: 256px;
 }
 
 .pais__ {
   background-color: transparent;
-  color: var(--delta);
+  color: var(--white);
   font-family: var(--font-family-inter);
-  font-size: 12.2px;
-  font-style: bold;
+  font-size: var(--font-size-s);
+  font-style: normal;
   font-weight: 400;
-  height: 14px;
+  height: 24px;
   left: 1285px;
   letter-spacing: 0.00px;
   line-height: 14px;
   position: absolute;
   text-align: left;
-  top: 1810px;
+  top: 200px;
   white-space: nowrap;
-  width: 24px;
+
 }
 
 .seleciona {
@@ -442,7 +466,7 @@
   font-family: var(--font-family-inter);
   font-size: 16.6px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 900;
   height: 27px;
   left: 0px;
   letter-spacing: 0.00px;
@@ -456,12 +480,12 @@
 
 #primeiro {
   background-color: transparent;
-  border-color: #eaeaea;
-  color: var(--wild-sand);
+  color: var(--delta);
   font-family: var(--font-family-inter);
   font-size: 20px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 900;
+  padding: 12px 0 0 20px;
 }
 
 .checkbox {
@@ -481,12 +505,12 @@
   font-style: normal;
   font-weight: 400;
   height: 105px;
-  left: 1010px;
+  left: 990px;
   letter-spacing: 0.00px;
   line-height: 24px;
   position: absolute;
   text-align: left;
-  top: 1940px;
+  top: 290px;
   width: 507px;
 }
 
@@ -501,28 +525,46 @@
 }
 
 .button {
-  background-color: var(--tango);
-  border: 2px solid;
-  border-color: var(--tango);
-  border-radius: 3px;
-  height: 66px;
-  left: 976px;
-  position: absolute;
-  top: 2050px;
-  width: 168px;
+  
 }
 
 .texto__  {
-  background-color: transparent;
   color: var(--wild-sand);
   font-family: var(--font-family-inter);
-  font-size: 16.6px;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0.00px;
-  line-height: 60px;
-  position: relative;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  position: absolute;
   text-align: center;
-  white-space: nowrap;
-  margin-left: 20px;
+  background-color: var(--tango);
+  border: none;
+  border-radius: 3px;
+  height: 66px;
+  left: 1350px;
+  top: 390px;
+  width: 168px;
 }
+
+#closeButton {
+  position: absolute;
+  top: 10px;
+  font-weight: 900;
+  right: 10px;
+  background-color: transparent;
+  color: var(--wild-sand);
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#closeButton:hover {
+  color: orange;
+  font-weight: 900;
+}
+
+input:invalid {
+  border-color: var(--tango);
+}
+
