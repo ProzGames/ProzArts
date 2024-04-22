@@ -7,6 +7,7 @@
     <script src="../../components/load/estilosExternos.js"></script>
     <script src="../../components/load/componentsHTML.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <!-- <script src="./script.js" defer></script> -->
     <title>Pagina Sobre</title>
   </head>
   <body>
@@ -100,10 +101,10 @@
         </div>
       </div>
 
-      <div class="nossosValores">
+      <!-- <div class="nossosValores">
         <h2>Nossos valores</h2>
 
-        <div class="cardsValores">
+        <div class="cardsValores" >
           <div class="cardValores">
             <h4>Criatividade</h4>
             <p>
@@ -149,17 +150,78 @@
 
         <div class="scrollbar">
           <img
+            
             src="../../images/iconScrollbar.svg"
             alt="scrollbar_cardValores"
           />
+          
           <img src="../../images/iconSeta.svg" alt="seta_cardValores" />
+          
+        </div>
+      </div> -->
+      <div class="nossosValores">
+        <h2>Nossos valores</h2>
+        <button class="pre-btn">
+          <img src="../../images/arrow.png" alt="" />
+        </button>
+        <button class="nxt-btn">
+          <img src="../../images/arrow.png" alt="" />
+        </button>
+        <div class="cardsValores">
+          <div class="cardValores">
+            <h4>Criatividade</h4>
+            <p>
+              Trabalhar para trazer criatividade, ideias originais e empolgação
+              a tudo que fazemos.
+            </p>
+          </div>
+
+          <div class="cardValores">
+            <h4>Pioneirismo</h4>
+            <p>
+              Agir com a curiosidade e coragem necessária para experimentar,
+              inovar e liderar.
+            </p>
+          </div>
+
+          <div class="cardValores">
+            <h4>Entusiasmo</h4>
+            <p>
+              Nós estamos em nosso melhor momento, quando perseguimos o que
+              amamos e nos divertimos fazendo isso.
+            </p>
+          </div>
+
+          <div class="cardValores">
+            <h4>Determinação</h4>
+            <p>
+              Levar foco, motivação e convicção às nossas ações. Prosperar
+              durante todo o percurso, mantendo a motivação para alcançar a
+              excelência.
+            </p>
+          </div>
+
+          <div class="cardValores">
+            <h4>Aprendizado</h4>
+            <p>
+              Ouvir, ter humildade, manter a mente aberta a novas formas de
+              pensar e olhar através da lente da inclusão. Manter o desafio de
+              crescer e mudar como uma empresa.
+            </p>
+          </div>
+        </div>
+
+        <div class="scrollbar">
+          <!-- <img src="../../images/iconScrollbar.svg" alt="scrollbar_cardValores" /> -->
+          <!-- <button class="pre-btn"><img src="../../images/iconScrollbar.svg" alt="scrollbar_cardValores"></button> -->
+          <!-- <button class="nxt-btn"><img src="../../images/iconSeta.svg" alt="seta_cardValores"></button> -->
         </div>
       </div>
 
       <div class="noticiasRecentes">
         <h3>Notícias mais recentes</h3>
 
-        <div class="cardsNoticias">
+        <div class="cardsNoticias" id="cardNoticiasContainer">
           <div class="cardNoticia">
             <img src="../../images/imgNoticias1.svg" alt="imgNoticias1" />
             <div class="cardNoticiaTexto">
@@ -215,9 +277,10 @@
             </div>
           </div>
         </div>
+        
 
-        <div class="carregar">
-          <img src="../../images/iconCarregar.svg" alt="iconCarregar" />
+        <div class="carregar" id="load-more">
+          <!-- <img src="../../images/iconCarregar.svg" alt="iconCarregar" /> -->
           <p>Carregar mais</p>
         </div>
       </div>
@@ -254,5 +317,54 @@
     </main>
     <footer></footer>
     <script src="../../components/footer.js"></script>
+
+    <!-- <script>
+      let loadMoreBtn = document.querySelector("#load-more");
+      let currentItem = 0;
+
+      loadMoreBtn.onclick = () => {
+        let boxes = [
+          ...document.querySelectorAll(
+            ".noticiasRecentes .cardsNoticias .cardNoticia"
+          ),
+        ];
+        for (var i = currentItem; i < currentItem + 3; i++) {
+          boxes[i].style.display = "inline-block";
+        }
+        currentItem += 3;
+
+        if (currentItem >= boxes.length) {
+          loadMoreBtn.style.display = "none";
+        }
+      };
+    </script> -->
+
+    <!-- quero acrescentar load more usando Java Script e mostre o clone dos 3 cartõesNoticia ao clicar no load more: -->
+    <script>
+      // Select the container and the load more button
+      const cardNoticiasContainer = document.getElementById("cardNoticiasContainer");
+      const loadMoreButton = document.getElementById("load-more");
+    
+      // Set the number of initially loaded cardNoticia elements
+      const initialLoadCount = 3;
+    
+      // Clone the first initialLoadCount cardNoticia elements and append them to the container
+      for (let i = 0; i < initialLoadCount; i++) {
+        const clone = cardNoticiasContainer.children[i].cloneNode(true);
+        cardNoticiasContainer.appendChild(clone);
+      }
+    
+      // Add a click event listener to the load more button
+      loadMoreButton.addEventListener("click", () => {
+        // Clone the first initialLoadCount cardNoticia elements and append them to the container
+        for (let i = 0; i < initialLoadCount; i++) {
+          const clone = cardNoticiasContainer.children[i].cloneNode(true);
+          cardNoticiasContainer.appendChild(clone);
+        }
+    
+        // Disable the load more button after clicking
+        loadMoreButton.disabled = true;
+      });
+    </script>
   </body>
 </html>

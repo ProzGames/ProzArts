@@ -163,6 +163,18 @@ main {
     margin-right: 0.6%;
 }
 
+.cardsValores {
+    display: flex;
+    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
+    padding-bottom: 20px; /* Adiciona um espaçamento na parte inferior para compensar a barra de rolagem */
+}
+
+.cardValores {
+    flex: 0 0 auto;
+    width: 300px; /* Define a largura dos cartões de valores */
+    margin-right: 20px; /* Adiciona um espaçamento entre os cartões */
+}
+
 .cardValores>p {
     margin-top: 6%;
     margin-bottom: 5%;
@@ -245,11 +257,18 @@ main {
     align-items: center;
     flex-direction: column;
     color: var(--cinzaLeve);
+    cursor: pointer;
 }
 
 .carregar>img {
     width: 4%;
     margin-bottom: 1%;
+}
+
+#load-more:hover{
+    background-color:rgb(42, 34, 36) ;
+    border-color:rgb(42, 34, 36);
+    color: #fff;
 }
 
 .informacoes {
@@ -297,3 +316,19 @@ main {
 .descricaoTextoInformacoes>p {
     margin-bottom: 2%;
 }
+
+
+/* .pre-btn,
+.nxt-btn {
+  border: none;
+  width: 10vw;
+  height: 100%;
+  position:absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  cursor: pointer;
+  z-index: 8;
+} */
