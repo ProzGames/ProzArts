@@ -40,7 +40,19 @@
     width: 100%;
 }
 
-.banner {
+
+.topo { /* relativo ao video */
+  position: relative;
+  height: 100vh; /* Ajuste a altura conforme necessário */
+}
+
+.topo video { /* relativo ao video */
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.topo { /* relativo ao video */
   width: 100%;
   height: 64vh;
   display: flex;
