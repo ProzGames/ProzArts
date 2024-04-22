@@ -41,7 +41,7 @@
     margin-bottom: 20px;
   }
 
-h1 {
+.tx {
   font-family: var(--font-family-inter);
   font-size: var(--font-size-xl);
   font-weight: 900;
