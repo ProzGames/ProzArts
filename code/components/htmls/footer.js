@@ -6,28 +6,30 @@ function montarAreaAside(){
   const div_links = document.createElement("div")
   div_links.id = "links-e-configs"
   div_links.innerHTML = `
-  <aside id="site">
-    <h3>Proz Arts</h3>
-    <ul>
-      <li><a href="${uriSobre}">Sobre</a></li>
-      <li><a href="${uriCompromisso}">Compromisso</a></li>
-      <li><a href="${uriJogos}">Jogos</a></li>
-      <li><a href="${uriComunidade}">Comunidade</a></li>
-    </ul>
-  </aside>
-  <aside id="contato">
-    <h3>Nossas Redes</h3>
-    <ul>
-      <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-      <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-      <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-      <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-      <li><a href="#"><i class="fa-brands fa-twitch"></i></a></li>
-    </ul>
-  </aside>
+  <div id="site-contato">
+    <aside id="site">
+      <h3>Proz Arts</h3>
+      <ul>
+        <li><a href="${uriSobre}">Sobre</a></li>
+        <li><a href="${uriCompromisso}">Compromisso</a></li>
+        <li><a href="${uriJogos}">Jogos</a></li>
+        <li><a href="${uriComunidade}">Comunidade</a></li>
+      </ul>
+    </aside>
+    <aside id="contato">
+      <h3>Nossas Redes</h3>
+      <ul>
+        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-twitch"></i></a></li>
+      </ul>
+    </aside>
+  </div>
   <div id="idiomas">
     <div id="caixa-de-idioma">
-      <label for="lg-select">Language</label>
+      <label for="lg-select">Idioma</label>
       <div>
         <img src="${localizacao_da_raiz()}images/bd-br.jfif" alt="bandeira do brasil">
         <select name="lg" id="lg-select">
