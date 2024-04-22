@@ -221,7 +221,10 @@
       <div class="noticiasRecentes">
         <h3>Notícias mais recentes</h3>
 
-        <div class="cardsNoticias" id="cardNoticiasContainer">
+        <div
+          class="cardsNoticias cardNoticiasContainer"
+          id="cardNoticiasContainer"
+        >
           <div class="cardNoticia">
             <img src="../../images/imgNoticias1.svg" alt="imgNoticias1" />
             <div class="cardNoticiaTexto">
@@ -277,7 +280,66 @@
             </div>
           </div>
         </div>
-        
+
+        <div
+          class="cardsNoticias cardNoticiasContainer"
+          id="cardNoticiasContainer"
+        >
+          <div class="cardNoticia" id="cardNoticiaOculto">
+            <img src="../../images/imgNoticias1.svg" alt="imgNoticias1" />
+            <div class="cardNoticiaTexto">
+              <div class="cardNoticiaData">
+                <p id="ArtigoVermelho">Proz Arts Inc.</p>
+                <p>09/02/2024</p>
+              </div>
+
+              <h4>PA SPORTS FC™ - Dia a dia no trabalho</h4>
+
+              <p id="cardNoticiaDescricao">
+                Saiba da equipe de desenvolvimento do PA SPORTS FC como é o
+                trabalho
+              </p>
+            </div>
+          </div>
+
+          <div class="cardNoticia" id="cardNoticiaOculto">
+            <img src="../../images/imgNoticias2.svg" alt="imgNoticias2" />
+            <div class="cardNoticiaTexto">
+              <div class="cardNoticiaData">
+                <p id="ArtigoVermelho">Proz Arts Inc.</p>
+                <p>18/01/2024</p>
+              </div>
+
+              <h4>Desbloqueando oportunidades: um olhar sobre a vida na PA</h4>
+
+              <p id="cardNoticiaDescricao">
+                Kirk Chavarie, recrutador da Proz Arts, compartilha o que sabe
+                sobre os valores, cultura e oportunidades de desenvolvimento de
+                carreira na empresa
+              </p>
+            </div>
+          </div>
+
+          <div class="cardNoticia" id="cardNoticiaOculto">
+            <img src="../../images/imgNoticias3.svg" alt="imgNoticias3" />
+            <div class="cardNoticiaTexto">
+              <div class="cardNoticiaData">
+                <p id="ArtigoVermelho">Frostbite</p>
+                <p>18/12/2023</p>
+              </div>
+
+              <h4>
+                Anunciamos uma nova aparência e visão para o engine Frostbite da
+                PA
+              </h4>
+
+              <p id="cardNoticiaDescricao">
+                O rebranding do Frostbite da Proz Arts em 2024 sinaliza uma nova
+                era mais colaborativa para seu engine de jogo moderno.
+              </p>
+            </div>
+          </div>
+        </div>
 
         <div class="carregar" id="load-more">
           <!-- <img src="../../images/iconCarregar.svg" alt="iconCarregar" /> -->
@@ -318,18 +380,43 @@
     <footer></footer>
     <script src="../../components/footer.js"></script>
 
-    <!-- <script>
-      let loadMoreBtn = document.querySelector("#load-more");
-      let currentItem = 0;
+    <script>
+      const valoresContainers = [...document.querySelectorAll(".cardsValores")];
+      const nxtBtn = [...document.querySelectorAll(".nxt-btn")];
+      const preBtn = [...document.querySelectorAll(".pre-btn")];
 
+      valoresContainers.forEach((item, i) => {
+        let containerDimensions = item.getBoundingClientRect();
+        let containerWidth = containerDimensions.width;
+
+        nxtBtn[i].addEventListener("click", () => {
+          item.scrollLeft += containerWidth;
+        });
+
+        preBtn[i].addEventListener("click", () => {
+          item.scrollLeft -= containerWidth;
+        });
+      });
+    </script>
+
+    <script>
+      // <!-- Selecione todos os cartões de notícias e oculte todos, exceto os três primeiros:-->
+      let loadMoreBtn = document.querySelector("#load-more");
+      let currentItem = 3;
+      let boxes = document.querySelectorAll(
+        ".cardNoticiasContainer .cardNoticia"
+      );
+
+      for (let i = currentItem; i < boxes.length; i++) {
+        boxes[i].style.display = "none";
+      }
+
+      // <!--Adicione um evento de clique ao botão "Carregar mais" que exibe os próximos três cartões de notícias:-->
       loadMoreBtn.onclick = () => {
-        let boxes = [
-          ...document.querySelectorAll(
-            ".noticiasRecentes .cardsNoticias .cardNoticia"
-          ),
-        ];
-        for (var i = currentItem; i < currentItem + 3; i++) {
-          boxes[i].style.display = "inline-block";
+        for (let i = currentItem; i < currentItem + 3; i++) {
+          if (i < boxes.length) {
+            boxes[i].style.display = "inline-block";
+          }
         }
         currentItem += 3;
 
@@ -337,34 +424,6 @@
           loadMoreBtn.style.display = "none";
         }
       };
-    </script> -->
-
-    <!-- quero acrescentar load more usando Java Script e mostre o clone dos 3 cartõesNoticia ao clicar no load more: -->
-    <script>
-      // Select the container and the load more button
-      const cardNoticiasContainer = document.getElementById("cardNoticiasContainer");
-      const loadMoreButton = document.getElementById("load-more");
-    
-      // Set the number of initially loaded cardNoticia elements
-      const initialLoadCount = 3;
-    
-      // Clone the first initialLoadCount cardNoticia elements and append them to the container
-      for (let i = 0; i < initialLoadCount; i++) {
-        const clone = cardNoticiasContainer.children[i].cloneNode(true);
-        cardNoticiasContainer.appendChild(clone);
-      }
-    
-      // Add a click event listener to the load more button
-      loadMoreButton.addEventListener("click", () => {
-        // Clone the first initialLoadCount cardNoticia elements and append them to the container
-        for (let i = 0; i < initialLoadCount; i++) {
-          const clone = cardNoticiasContainer.children[i].cloneNode(true);
-          cardNoticiasContainer.appendChild(clone);
-        }
-    
-        // Disable the load more button after clicking
-        loadMoreButton.disabled = true;
-      });
     </script>
   </body>
 </html>

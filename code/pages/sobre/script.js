@@ -76,3 +76,53 @@ loadMoreBtn.onclick = () => {
     loadMoreBtn.style.display = "none";
   }
 };
+
+// <!-- //quero acrescentar load more usando Java Script e mostre o clone dos 3 cartõesNoticia ao clicar no load more:
+// let loadMoreBtn = document.querySelector("#load-more");
+// let currentItem = 0;
+
+// loadMoreBtn.onclick = () => {
+//   let boxes = [
+//     ...document.querySelectorAll(
+//       ".noticiasRecentes .cardsNoticias .cardNoticia"
+//     ),
+//   ];
+//   for (var i = currentItem; i < currentItem + 3; i++) {
+//     boxes[i].style.display = "inline-block";
+//   }
+//   currentItem += 3;
+
+//   if (currentItem >= boxes.length) {
+//     loadMoreBtn.style.display = "none";
+//   }
+// };
+//-->
+
+// <!-- quero acrescentar load more usando Java Script e mostre o clone dos 3 cartõesNoticia ao clicar no load more: -->
+//
+//   // Select the container and the load more button
+//   const cardNoticiasContainer = document.getElementById("cardNoticiasContainer");
+//   const loadMoreButton = document.getElementById("load-more");
+
+//   // Set the number of initially loaded cardNoticia elements
+//   const initialLoadCount = 3;
+
+//   // Clone the first initialLoadCount cardNoticia elements and append them to the container
+//   for (let i = 0; i < initialLoadCount; i++) {
+//     const clone = cardNoticiasContainer.children[i].cloneNode(true);
+//     cardNoticiasContainer.appendChild(clone);
+//   }
+
+//   // Add a click event listener to the load more button
+//   loadMoreButton.addEventListener("click", () => {
+//     // Clone the first initialLoadCount cardNoticia elements and append them to the container
+//     for (let i = 0; i < initialLoadCount; i++) {
+//       const clone = cardNoticiasContainer.children[i].cloneNode(true);
+//       cardNoticiasContainer.appendChild(clone);
+//     }
+
+//     // Disable the load more button after clicking
+//     loadMoreButton.disabled = true;
+//   });
+//
+
