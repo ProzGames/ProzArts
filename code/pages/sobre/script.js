@@ -126,3 +126,43 @@ loadMoreBtn.onclick = () => {
 //   });
 //
 
+
+
+// <!-- <script>
+// const valoresContainers = [...document.querySelectorAll(".cardsValores")];
+// const nxtBtn = [...document.querySelectorAll(".nxt-btn")];
+// const preBtn = [...document.querySelectorAll(".pre-btn")];
+
+// valoresContainers.forEach((item, i) => {
+//   let containerDimensions = item.getBoundingClientRect();
+//   let containerWidth = containerDimensions.width;
+
+//   nxtBtn[i].addEventListener("click", () => {
+//     item.scrollLeft += containerWidth;
+//   });
+
+//   preBtn[i].addEventListener("click", () => {
+//     item.scrollLeft -= containerWidth;
+//   });
+// });
+// </script> -->
+
+// <!-- barra de rolagem  1-->
+// <!-- <script>
+// const valoresContainers = [...document.querySelectorAll(".cardsValores")];
+// const nxtBtn = [...document.querySelectorAll(".nxt-btn")];
+// const preBtn = [...document.querySelectorAll(".pre-btn")];
+
+// valoresContainers.forEach((item, i) => {
+//   let containerDimensions = item.getBoundingClientRect();
+//   let containerWidth = containerDimensions.width;
+
+//   nxtBtn[i].addEventListener("click", () => {
+//     item.scrollLeft += containerWidth;
+//   });
+
+//   preBtn[i].addEventListener("click", () => {
+//     item.scrollLeft -= containerWidth;
+//   });
+// });
+</script> -->

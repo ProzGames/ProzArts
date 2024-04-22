@@ -325,6 +325,8 @@ main {
 }
 
 
+
+
 /* .pre-btn,
 .nxt-btn {
   border: none;
@@ -339,3 +341,51 @@ main {
   cursor: pointer;
   z-index: 8;
 } */
+
+
+
+/* barra rolagem horizontal 1*/
+/* .cardsValores {
+    overflow-x: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #ddd;
+  }
+  
+  .cardsValores::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .cardsValores::-webkit-scrollbar-track {
+    background-color: #ddd;
+  }
+  
+  .cardsValores::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 5px;
+  }   */
+
+
+  
+
+/* barra rolagem horizontal 2*/
+  /* .cardsValores {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #ddd;
+  }
+  
+  .cardsValores::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .cardsValores::-webkit-scrollbar-track {
+    background-color: #ddd;
+  }
+  
+  .cardsValores::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 5px;
+  } */

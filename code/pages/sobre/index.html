@@ -161,12 +161,6 @@
       </div> -->
       <div class="nossosValores">
         <h2>Nossos valores</h2>
-        <button class="pre-btn">
-          <img src="../../images/arrow.png" alt="" />
-        </button>
-        <button class="nxt-btn">
-          <img src="../../images/arrow.png" alt="" />
-        </button>
         <div class="cardsValores">
           <div class="cardValores">
             <h4>Criatividade</h4>
@@ -209,9 +203,24 @@
               crescer e mudar como uma empresa.
             </p>
           </div>
+
+          <div class="cardValores">
+            <h4>Trabalho em Equipe</h4>
+            <p>
+              Compromisso uns com os outros e com a responsabilidade e integridade necessárias para sermos uma equipe diversa e bem-sucedida
+            </p>
+          </div>
+
+
         </div>
 
         <div class="scrollbar">
+          <button class="pre-btn">
+            <img src="../../images/left-arrow.png" alt="" />
+          </button>
+          <button class="nxt-btn">
+            <img src="../../images/right-arrow.png" alt="" />
+          </button>
           <!-- <img src="../../images/iconScrollbar.svg" alt="scrollbar_cardValores" /> -->
           <!-- <button class="pre-btn"><img src="../../images/iconScrollbar.svg" alt="scrollbar_cardValores"></button> -->
           <!-- <button class="nxt-btn"><img src="../../images/iconSeta.svg" alt="seta_cardValores"></button> -->
@@ -286,56 +295,51 @@
           id="cardNoticiasContainer"
         >
           <div class="cardNoticia" id="cardNoticiaOculto">
-            <img src="../../images/imgNoticias1.svg" alt="imgNoticias1" />
+            <img src="../../images/imgNoticias4.png" alt="imgNoticias4" />
             <div class="cardNoticiaTexto">
               <div class="cardNoticiaData">
                 <p id="ArtigoVermelho">Proz Arts Inc.</p>
-                <p>09/02/2024</p>
+                <p>13/04/2024</p>
               </div>
 
-              <h4>PA SPORTS FC™ - Dia a dia no trabalho</h4>
+              <h4>A Proz Arts está em várias listas de melhores lugares para trabalhar</h4>
 
               <p id="cardNoticiaDescricao">
-                Saiba da equipe de desenvolvimento do PA SPORTS FC como é o
-                trabalho
+                O nosso pessoal, seu crescimento e desenvolvimento, além de seu bem-estar, são o que mais importa na Proz Arts.
               </p>
             </div>
           </div>
 
           <div class="cardNoticia" id="cardNoticiaOculto">
-            <img src="../../images/imgNoticias2.svg" alt="imgNoticias2" />
+            <img src="../../images/imgNoticias5.png" alt="imgNoticias5" />
             <div class="cardNoticiaTexto">
               <div class="cardNoticiaData">
                 <p id="ArtigoVermelho">Proz Arts Inc.</p>
-                <p>18/01/2024</p>
+                <p>16/04/2024</p>
               </div>
 
-              <h4>Desbloqueando oportunidades: um olhar sobre a vida na PA</h4>
+              <h4>Por dentro do estúdio Full Circle – Melvin Teo, produtor de skate</h4>
 
               <p id="cardNoticiaDescricao">
-                Kirk Chavarie, recrutador da Proz Arts, compartilha o que sabe
-                sobre os valores, cultura e oportunidades de desenvolvimento de
-                carreira na empresa
+                Descubra mais sobre o estúdio Full Circle com Melvin Teo, produtor de skate.
               </p>
             </div>
           </div>
 
           <div class="cardNoticia" id="cardNoticiaOculto">
-            <img src="../../images/imgNoticias3.svg" alt="imgNoticias3" />
+            <img src="../../images/imgNoticias6.jpg" alt="imgNoticias3" />
             <div class="cardNoticiaTexto">
               <div class="cardNoticiaData">
-                <p id="ArtigoVermelho">Frostbite</p>
-                <p>18/12/2023</p>
+                <p id="ArtigoVermelho">Proz Arts Inc.</p>
+                <p>20/04/2024</p>
               </div>
 
               <h4>
-                Anunciamos uma nova aparência e visão para o engine Frostbite da
-                PA
+                Juntos: mais fortes em união
               </h4>
 
               <p id="cardNoticiaDescricao">
-                O rebranding do Frostbite da Proz Arts em 2024 sinaliza uma nova
-                era mais colaborativa para seu engine de jogo moderno.
+                EA celebrando e apoiando as pessoas que trabalham conosco, que jogam nossos jogos e são hispânicas/latinas
               </p>
             </div>
           </div>
@@ -380,22 +384,18 @@
     <footer></footer>
     <script src="../../components/footer.js"></script>
 
+    <!-- barra de rolagem  (2) -->
     <script>
-      const valoresContainers = [...document.querySelectorAll(".cardsValores")];
-      const nxtBtn = [...document.querySelectorAll(".nxt-btn")];
-      const preBtn = [...document.querySelectorAll(".pre-btn")];
+      const valoresContainers = document.querySelector(".cardsValores");
+      const nxtBtn = document.querySelector(".nxt-btn");
+      const preBtn = document.querySelector(".pre-btn");
 
-      valoresContainers.forEach((item, i) => {
-        let containerDimensions = item.getBoundingClientRect();
-        let containerWidth = containerDimensions.width;
+      nxtBtn.addEventListener("click", () => {
+        valoresContainers.scrollLeft += valoresContainers.offsetWidth;
+      });
 
-        nxtBtn[i].addEventListener("click", () => {
-          item.scrollLeft += containerWidth;
-        });
-
-        preBtn[i].addEventListener("click", () => {
-          item.scrollLeft -= containerWidth;
-        });
+      preBtn.addEventListener("click", () => {
+        valoresContainers.scrollLeft -= valoresContainers.offsetWidth;
       });
     </script>
 
