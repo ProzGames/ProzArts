@@ -27,7 +27,7 @@
         <img src="./images/logo_battlefield_V.png" alt="Logo Battlefield" />
       </div>
       <p class="topo__titulo">
-        JOGUE BATTLEFIELD&trade; V AGORA PARA XBOX ONE,<br />PLAYSTATION&reg; 4 E PC
+        JOGUE BATTLEFIELD&trade; V AGORA PARA XBOX ONE, PLAYSTATION&reg; 4 E PC
       </p>
 
       <div class="topo__btn">
@@ -37,110 +37,116 @@
       <div class="topo__video">
         <button id="verTrailerButton" class="topo__video__texto">
           <i id="verTrailerButton" class="fas fa-play"></i>
-          Ver trailer          
+          Ver trailer
         </button>
       </div>
     </section>
 
-    <section class="menu" id="nextSection">
-      <div class="link">
+    <section class="menu-container">
+      <div class="menu" id="jogosMenu">
         <div class="opcao">
           <div class="link__jogo">
             <div class="jogo">Jogos</div>
           </div>
+        </div>
+      </div>
+      <div class="menu1" id="dlcMenu">
+        <div class="opcao">
           <div class="link__dlc">
-            <div class="dlc">Dlc</div>
+            <div class="dlc">DLC</div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="grid-container">
+    <section class="grid-container" id="jogosContent">
+      <div class="image" onclick="window.open('https://store.steampowered.com/app/1938010/WILD_HEARTS/', '_blank');">
+        <img src="./images/wild_cover.png" alt="Capa Wild Hearts" />
+        <img src="./images/wild_logo.png" alt="Wild Logotipo" />
+      </div>
 
-    <div class="image">
-      <img src="./images/wild_cover.png" alt="Capa Wild Hearts" />
-      <img src="./images/wild_logo.png" alt="Wild Logotipo" />
-    </div>
+      <div class="image" onclick="window.open('https://store.steampowered.com/app/1238810/Battlefield_V/', '_blank');">
+        <img src="./images/battle_cover.png" alt="Capa Battlefield" />
+        <img src="./images/battle_logo.png" alt="Battlefield Logotipo" />
+      </div>
 
-    <div class="image">
-      <img src="./images/battle_cover.png" alt="Capa Battlefield" />
-      <img src="./images/battle_logo.png" alt="Battlefield Logotipo" />
-    </div>
+      <div class="image" onclick="window.open('https://store.steampowered.com/app/2140610/The_Sims_4_Pacote_de_Expanso_Alugase/', '_blank');">
+        <img src="./images/sims_cover.png" alt="Capa The Sims" />
+        <img id="imagens" src="./images/sims_logo.svg" alt="The Sims Logotipo" />
+      </div>
 
-    <div class="image">
-      <img src="./images/sims_cover.png" alt="Capa The Sims" />
-      <img src="./images/sims_logo.svg" alt="The Sims Logotipo" />
-    </div>
+      <div class="image" onclick="window.open('https://store.steampowered.com/app/1774580/STAR_WARS_Jedi_Survivor/', '_blank');">
+        <img src="./images/jedi_cover.png" alt="Capa Jedi Survivor" />
+        <img id="imagens" src="./images/jedi_logo.svg" alt="Jedi Survivor Logotipo" />
+      </div>
 
-    <div class="image">
-      <img src="./images/jedi_cover.png" alt="Capa Jedi Survivor" />
-      <img src="./images/jedi_logo.svg" alt="Jedi Survivor Logotipo" />
-    </div>
+      <div class="image" onclick="window.open('https://store.steampowered.com/app/2009100/Immortals_of_Aveum/', '_blank');">
+        <img src="./images/immortals_cover.png" alt="Capa Immortals" />
+        <img id="imagens" src="./images/immortals_logo.svg" alt="Immortals Logotipo" />
+      </div>
 
-    <div class="image">
-      <img src="./images/immortals_cover.png" alt="Capa Immortals" />
-      <img src="./images/immortals_logo.svg" alt="Immortals Logotipo" />
-    </div>
+      <div class="image" onclick="window.open('https://store.steampowered.com/app/1693980/Dead_Space/', '_blank');">
+        <img src="./images/space_cover.png" alt="Capa Dead Space" />
+        <img id="imagens" src="./images/dead_logo.svg" alt="Dead Space Logotipo" />
+      </div>
+    </section>
 
-    <div class="image">
-      <img src="./images/space_cover.png" alt="Capa Dead Space" />
-      <img src="./images/dead_logo.svg" alt="Dead Space Logotipo" />
-    </div>
-
-  </section>
+    <section class="grid-container" id="dlcContent" style="display: none;">
+      <h1>Aguarde! Novas funcionalidades logo serão adicionadas!</h1>
+    </section>
 
     <section class="newsletter__">
       <div class="newsletter" id="newsletterBanner">
-      <h1 class="titulo">
-        INSCREVA-SE PARA<br />RECEBER AS<br />NOTÍCIAS DE<br />Proz Arts™
-      </h1>
-      <p class="texto">
-        Inscreva-se hoje mesmo e receba por e-mail as últimas notícias,<br />vídeos,
-        ofertas e muito mais de Proz Arts (além de outras notícias,<br/>produtos,
-        eventos e promoções da PA).
-      </p>
-      <div class="">
-        <form>
-          <input class="email" type="text" id="texto" name="texto" placeholder="email@email.com" />
-          <p class="email__">E-mail:</p><br />
-          <input class="nascimento" type="text" id="dataNascimento" name="dataNascimento" placeholder="DD MM AAAA"/>
-          <p class="nascimento__">Data de Nascimento:</p><br />
-          
-          <select class="pais" id="primeiro">
-            <option class="seleciona" value="opcao1">Brasil</option>
-            <option class="seleciona" value="opcao2">Estados Unidos</option>
-            <option class="seleciona" value="opcao3">Inglaterra</option>
-          </select>
-          <p class="pais__">País:</p>
-          <br />                    
-        
-        <button id="closeButton" aria-label="Fechar" title="Fechar newsletter">X</button>       
-      </div>
-      <form>
-        <p class="texto__checkbox">
-          <input class="checkbox" type="checkbox" />
-          <span>
-            <span class="termos">Posso cancelar a assinatura a qualquer momento ao alterar
-              minhas</span>
-            <span class="termos1">preferências de e-mail</span>
-            <span class="termos">, entrar em contato com </span>
-            <span class="termos1">privacyadmin.pa.com</span>
-          </span>
+        <h1 class="titulo">
+          INSCREVA-SE PARA<br />RECEBER AS<br />NOTÍCIAS DE<br />Proz Arts™
+        </h1>
+        <p class="texto">
+          Inscreva-se hoje mesmo e receba por e-mail as últimas notícias,<br />vídeos,
+          ofertas e muito mais de Proz Arts (além de outras notícias,<br />produtos,
+          eventos e promoções da PA).
         </p>
-        <div class="button">
-          <button class="texto__" type="submit">INSCREVER-SE</button>
+        <div class="">
+          <form>
+            <input class="email" type="text" id="texto" name="texto" placeholder="email@email.com" />
+            <p class="email__">E-mail:</p><br />
+            <input class="nascimento" type="text" id="dataNascimento" name="dataNascimento" placeholder="DD MM AAAA" />
+            <p class="nascimento__">Data de Nascimento:</p><br />
+
+            <select class="pais" id="primeiro">
+              <option class="seleciona" value="opcao1">Brasil</option>
+              <option class="seleciona" value="opcao2">Estados Unidos</option>
+              <option class="seleciona" value="opcao3">Inglaterra</option>
+            </select>
+            <p class="pais__">País:</p>
+            <br />
+
+            <button id="closeButton" aria-label="Fechar" title="Fechar newsletter">X</button>
+          </form>
         </div>
-      </form>
+        <form>
+          <p class="texto__checkbox">
+            <input class="checkbox" type="checkbox" />
+            <span>
+              <span class="termos">Posso cancelar a assinatura a qualquer momento ao alterar
+                minhas</span>
+              <span class="termos1">preferências de e-mail</span>
+              <span class="termos">, entrar em contato com </span>
+              <span class="termos1">privacyadmin.pa.com</span>
+            </span>
+          </p>
+          <div class="button">
+            <button class="texto__" type="submit">INSCREVER-SE</button>
+          </div>
+        </form>
       </div>
-      
-    </div>
-  </section>
+    </section>
 
   </main>
 
   <footer></footer>
   <script src="./script.js"></script>
   <script src="./btn.js"></script>
+  <script src="./menu.js"></script>
 </body>
 
 </html>
