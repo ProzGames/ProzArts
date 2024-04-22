@@ -1,5 +1,6 @@
 @import url("./pallete.css");
 
+/*estilos para todos os htmls*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -10,6 +11,7 @@ button:hover {
   cursor: pointer;
 }
 
+/*estilo do header e footer*/
 header {
   background-color: var(--background-color-quatro);
 
@@ -58,7 +60,7 @@ header button {
   width: 131px;
 }
 
-#icon-menu-mobile{
+header #icon-menu-mobile{
   display: none;
   color: white;
   font-size: 1.5em;
@@ -102,20 +104,27 @@ footer #informacao {
 
 footer #links-e-configs {
   border-bottom: 1px solid var(--font-color-cinco);
-
+  justify-content: space-between;
   padding-bottom: 1em;
+  gap: 9%;
+}
+
+footer #site-contato{
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
 }
 
 footer #informacao {
   padding-top: 1em;
 }
 
-footer #links-e-configs #site {
-  width: 40%;
+footer #links-e-configs #site-contato #site {
+  width: 50%;
 }
 
-footer #links-e-configs #contato {
-  width: 20%;
+footer #links-e-configs #site-contato #contato {
+  width: 50%;
 }
 
 footer #links-e-configs #idiomas {
@@ -124,11 +133,7 @@ footer #links-e-configs #idiomas {
   align-items: center;
   justify-content: center;
 
-  width: 40%;
-}
-
-footer #links-e-configs #idioma {
-  width: 15%;
+  width: 30%;
 }
 
 footer #contato a {
@@ -161,6 +166,7 @@ footer #idiomas #caixa-de-idioma {
 
   width: 75%;
   max-width: 200px;
+  min-width: min-content;
   padding: 10px;
 }
 
@@ -208,6 +214,7 @@ footer #informacao #links {
 
 footer #informacao #links p {
   width: 100%;
+  display: block;
 }
 
 footer #informacao #imgs {
@@ -226,6 +233,7 @@ footer #informacao h1 {
 }
 
 /*responsividade*/
+/*foco no header*/
 @media(max-width:1093px){
   header nav {
     flex-direction: row-reverse;
@@ -259,5 +267,158 @@ footer #informacao h1 {
     flex-direction: column;
 
     padding: 20px 10px 10px 10px;
+  }
+}
+
+/*foco no footer*/
+@media(max-width:1443px){
+  footer #informacao{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  footer #informacao{
+    gap: 5px;
+  }
+
+  footer #informacao #imgs,
+  footer #informacao #links{
+    justify-content: space-around;
+  }
+
+  footer #informacao #links p{
+    width: max-content;
+  }
+
+  footer #informacao #imgs{
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}
+
+@media (max-width:1293px){
+  footer #links-e-configs #site-contato{
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer #links-e-configs #site-contato ul,
+  footer #links-e-configs #site-contato h3{
+    justify-content: left;
+    text-align: left;
+  }
+
+  footer #links-e-configs #site-contato #contato,
+  footer #links-e-configs #site-contato #site{
+    width: 100%;
+    align-items: left;
+  }
+}
+
+@media (max-width:1000px){
+  footer{
+    padding: 5em;
+    padding-top: 2em;
+  }
+
+  footer #links-e-configs{
+    gap: 0px;
+  }
+  
+  footer #links-e-configs #site-contato{
+    width: min-content;
+  }
+  
+  footer #links-e-configs #idiomas{
+    width: min-content;
+  }
+}
+
+@media (max-width:800px){
+
+  footer{
+    padding: 1em;
+    padding-top: 2em;
+  }
+
+  footer #links-e-configs{
+    flex-direction: column;
+    gap: 10px;
+
+    position: relative;
+  }
+
+  footer #links-e-configs #site-contato{
+    width: 100%;
+  }
+
+  footer #links-e-configs #site ul{
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  footer #links-e-configs #idiomas{
+    position: absolute;
+    bottom: 17px;
+    right: 0;
+    height: max-content;
+    width: max-content;
+  }
+
+  footer #informacao{
+    position: relative;
+    gap: 10px;
+  }
+
+  footer #informacao img{
+    max-width: 100%;
+  }
+
+  footer #informacao #faixa-etaria{
+    position: absolute;
+    top: 30px;
+    right: 10px;
+  }
+
+  footer #informacao #links{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+}
+
+/**footer e header para telas abaixo de 500px*/
+@media(max-width:600px){
+  header{
+    font-size: 0.8em;
+    height: max-content;
+  }
+
+  header h1{
+    margin-left: 20px;
+    width: 105px;
+  }
+
+  header nav{
+    width: 70%;
+  }
+
+  header button{
+    padding: 5px;
+    border-radius: 9px;
+  }
+}
+
+@media(max-width:400px){
+  header h1{
+    margin-left: 20px;
+    width: 75px;
+  }
+
+  header nav{
+    width: 75%;
   }
 }
