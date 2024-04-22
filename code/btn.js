@@ -57,3 +57,4 @@ document.addEventListener("DOMContentLoaded", function() {
     nextSection.style.marginTop = '0';
   });
 });
+
