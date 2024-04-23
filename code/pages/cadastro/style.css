@@ -56,6 +56,7 @@ main li {
 main input {
   height: 30px;
   padding: 8px;
+  font-size: 18px;
 }
 
 main a {

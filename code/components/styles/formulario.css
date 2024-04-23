@@ -3,6 +3,7 @@
   --background-color-correto: rgb(91, 212, 91);
   --color-errado: rgb(212, 7, 7);
   --background-color-errado: rgb(240, 93, 93);
+  --color-branca: white;
 }
 
 form p {
@@ -12,7 +13,7 @@ form p {
 
 .campo-correto {
   border-color: var(--color-correto);
-  color: var(--color-correto);
+  color: var(--color-branca);
   background-color: var(--background-color-correto);
 }
 
@@ -22,7 +23,8 @@ form p {
 
 .campo-errado {
   border-color: var(--color-errado);
-  color: var(--color-errado);
+  color: var(--color-branca);
+  font-weight: bolder;
   background-color: var(--background-color-errado);
 }
 
