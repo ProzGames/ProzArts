@@ -1,4 +1,5 @@
 @import url("../../components/styles/global.css");
+@import url("../../components/styles/formulario.css");
 
 main {
   display: flex;
@@ -34,12 +35,16 @@ main form {
 }
 
 main ul {
+  list-style: none;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   padding: 10px 40px 10px 40px;
 }
 
 main h2 {
-  padding: 10px 0px 10px 0px;
+  padding: 10px 0px 0px 0px;
   text-align: center;
 }
 
