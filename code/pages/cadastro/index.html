@@ -14,36 +14,50 @@
 <body>
   <header></header>
   <main>
-    <section id="cadastro">
+    <div id="cadastro">
       <form>
         <div>
           <h2>CADASTRO</h2>
         </div>
-        <input id="nome_usuario" type="text" placeholder="Nome de usuário" /><br />
-        <input id="email" type="text" placeholder="Endereço de e-mail" /><br />
-        <input id="confirmar_email" type="text" placeholder="Confirme seu e-mail" /><br />
-        <input id="data_nascimento" type="text" placeholder="Data de nascimento" /><br />
-        <div id="termos_de_uso">
-          <input id="termos_check" type="checkbox" />
-          <p>
-            Aceito os <a id="termo_docs" class="form_docs" href="">Termos de Uso</a> e a
-            <a id="politica_docs" class="form_docs" href="">Política de Privacidade</a> da Proz Arts.
-          </p>
-        </div>
-        <br />
-        <div id="aceitar_conteudo">
-          <input id="conteudo_check" type="checkbox" />
-          <p>
-            Aceito receber os conteúdos informativos exclusivo por email com novidades sobre os títulos
-            da Proz Artz. Posso cancelar a qualquer momento.
-          </p>
-        </div>
-
+        <ul class="campos_form">
+          <li>
+            <label for="nome_usuario">Nome de usuário:</label>
+            <input id="nome_usuario" type="text" placeholder="ex: Juliano Pereira" /><br />
+          </li>
+          <li>
+            <label for="email">Email:</label>
+            <input id="email" type="text" placeholder="ex: juliano.Per@gmail.com" /><br />
+          </li>
+          <li>
+            <label for="confirmar_email">Confirme seu e-mail:</label>
+            <input id="confirmar_email" type="text" placeholder="" /><br />
+          </li>
+          <li>
+            <label for="data_nascimento">Data de nascimento:</label>
+            <input id="data_nascimento" type="date" placeholder="16/11/2001" /><br />
+          </li>
+          <li>
+            <div id="termos_de_uso">
+              <label for="termos_check">
+                Aceito os <a id="termo_docs" class="form_docs" href="">Termos de Uso</a> e a
+                <a id="politica_docs" class="form_docs" href="">Política de Privacidade</a> da Proz Arts.
+              </label>
+              <input id="termos_check" type="checkbox" />
+            </div>
+            <div id="aceitar_conteudo">
+              <label for="conteudo_check">
+                Aceito receber os conteúdos informativos exclusivo por email com novidades sobre os títulos
+                da Proz Artz. Posso cancelar a qualquer momento.
+              </label>
+              <input id="conteudo_check" type="checkbox" />
+            </div>
+          </li>
+        </ul>
         <div id="botao_form">
           <button class="enviar_forms" type="submit">INSCREVA-SE</button>
         </div>
       </form>
-    </section>
+    </div>
     <img src="../../images/ea_hero.png" alt="wallpaper_formulario" />
   </main>
   <footer></footer>
