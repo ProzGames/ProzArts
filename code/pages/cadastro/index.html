@@ -20,22 +20,23 @@
         <ul class="campos_form">
           <li>
             <label for="nome_usuario">Nome de usuário:</label>
-            <input id="nome_usuario" type="text" placeholder="ex: Juliano Pereira" class="msg-correto" />
+            <input id="nome_usuario" type="text" name="nome_usuario" placeholder="ex: Juliano Pereira"
+              class="msg-correto" />
             <p>Nome incorreto</p>
           </li>
           <li>
             <label for="email">Email:</label>
-            <input id="email" type="text" placeholder="ex: juliano.Per@gmail.com" />
+            <input id="email" type="email" name="email" placeholder="ex: juliano.Per@gmail.com" />
             <p>Email incorreto</p>
           </li>
           <li>
             <label for="confirmar_email">Confirme seu e-mail:</label>
-            <input id="confirmar_email" type="text" placeholder="ex: juliano.Per@gmail.com" />
+            <input id="confirmar_email" type="email" name="confirmar_email" placeholder="ex: juliano.Per@gmail.com" />
             <p>Email incorreto</p>
           </li>
           <li>
             <label for="data_nascimento">Data de nascimento:</label>
-            <input id="data_nascimento" type="date" class="campo-errado" />
+            <input id="data_nascimento" type="date" name="data_nascimento" class="campo-errado" />
             <p class="visivel msg-errado">Data de nascimento incorreta</p>
           </li>
           <li>
@@ -44,14 +45,14 @@
                 Aceito os <a id="termo_docs" class="form_docs" href="">Termos de Uso</a> e a
                 <a id="politica_docs" class="form_docs" href="">Política de Privacidade</a> da Proz Arts.
               </label>
-              <input id="termos_check" type="checkbox" />
+              <input id="termos_check" type="checkbox" name="termos_de_uso" />
             </div>
             <div id="aceitar_conteudo">
               <label for="conteudo_check">
                 Aceito receber os conteúdos informativos exclusivo por email com novidades sobre os títulos
                 da Proz Artz. Posso cancelar a qualquer momento.
               </label>
-              <input id="conteudo_check" type="checkbox" />
+              <input id="conteudo_check" type="checkbox" name="aceitar_conteudo" />
             </div>
           </li>
         </ul>
