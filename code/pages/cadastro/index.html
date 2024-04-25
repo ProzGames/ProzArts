@@ -7,6 +7,8 @@
   <script src="../../components/funcoesGlobais.js"></script>
   <script src="../../components/load/estilosExternos.js"></script>
   <script src="../../components/load/componentsHTML.js"></script>
+  <script src="../../components/logica/formulario/validacaoCampos.js" defer></script>
+  <script src="./script.js" defer></script>
   <link rel="stylesheet" href="style.css" />
   <title>Cadastro</title>
 </head>
@@ -15,7 +17,7 @@
   <header></header>
   <main>
     <div id="cadastro">
-      <form>
+      <form action="">
         <h2>CADASTRO</h2>
         <ul class="campos_form">
           <li>
@@ -36,8 +38,8 @@
           </li>
           <li>
             <label for="data_nascimento">Data de nascimento:</label>
-            <input id="data_nascimento" type="date" name="data_nascimento" class="campo-errado" />
-            <p class="visivel msg-errado">Data de nascimento incorreta</p>
+            <input id="data_nascimento" type="date" name="data_nascimento" />
+            <p>Data de nascimento incorreta</p>
           </li>
           <li>
             <div id="termos_de_uso">
