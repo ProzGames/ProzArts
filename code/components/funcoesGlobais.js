@@ -58,3 +58,27 @@ function localizacao_da_raiz() {
 
   return str
 }
+
+//-----------------------------------------------------------------------------------------------------
+function cadastro_usuario(nome, email, data_nascimento, senha, assinar_novidades) {
+  const usuario = {
+    nome: nome,
+    email: email,
+    data_nascimento: data_nascimento,
+    senha: senha,
+    quer_ver_novidades: assinar_novidades
+  }
+
+  let lista_usuarios = sessionStorage.getItem("usuarios")
+  if (lista_usuarios === undefined || lista_usuarios === null) {
+    const lista_usuarios = [usuario]
+    sessionStorage.setItem("usuarios", JSON.stringify(lista_usuarios))
+  } else {
+    lista_usuarios = JSON.parse(lista_usuarios);
+    lista_usuarios.push(usuario)
+    sessionStorage.setItem("usuarios", JSON.stringify(lista_usuarios))
+  }
+}
+
+cadastro_usuario("Francisco", "francisco@gmail.com", new Date(2001, 11, 16), "dada", false);
+console.log(JSON.parse(sessionStorage.getItem("usuarios")))
