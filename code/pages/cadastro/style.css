@@ -97,6 +97,10 @@ main .enviar_forms {
   border: none;
 }
 
+main .enviar_forms:disabled {
+  background-color: var(--background-color-sete);
+}
+
 @media(max-width:1150px) {
   main #cadastro {
     width: 60%;

@@ -1,12 +1,27 @@
 const input_email = document.getElementById("email")
 const form = document.querySelector("form")
 
-input_email.addEventListener("change", (e) => {
+//status de todos os campos
+const status_input = {
+  nome: false,
+  email: false,
+  dt_nascimento: false,
+  senha: false,
+  termo_uso_e_privacidade: false
+}
+
+input_email.addEventListener("change", () => {
   console.log(validacao_input_email(input_email.value))
+  if (validacao_input_email(input_email.value)) {
+    status_input.email = true;
+  }
 })
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
+  e.preventDefault()
+  alert("Usuário cadastrado com sucesso.");
 
-  console.log(e.target[1].value)
+  setTimeout(() => {
+    window.location.href = localizacao_da_raiz() + "index.html"
+  }, 3000);
 })

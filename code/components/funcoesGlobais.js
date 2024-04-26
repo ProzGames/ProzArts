@@ -49,14 +49,17 @@ function profundidade() {
  * @returns String
  */
 function localizacao_da_raiz() {
-  const p = profundidade()
-  if (p === 0) return "./"
+  const url_local = urlLocal()
 
-  let str = ""
-  for (let i = 0; i < p; i++)
-    str += "../"
+  const vetor = url_local.split("/")
 
-  return str
+  let url_base = ""
+  for (let i in vetor) {
+    url_base += vetor[i] + "/"
+    if (vetor[i] === "code") {
+      return url_base;
+    }
+  }
 }
 
 //-----------------------------------------------------------------------------------------------------
@@ -81,4 +84,4 @@ function cadastro_usuario(nome, email, data_nascimento, senha, assinar_novidades
 }
 
 cadastro_usuario("Francisco", "francisco@gmail.com", new Date(2001, 11, 16), "dada", false);
-console.log(JSON.parse(sessionStorage.getItem("usuarios")))
+//console.log(JSON.parse(sessionStorage.getItem("usuarios")))
