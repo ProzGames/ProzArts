@@ -7,6 +7,8 @@
   <script src="../../components/funcoesGlobais.js"></script>
   <script src="../../components/load/estilosExternos.js"></script>
   <script src="../../components/load/componentsHTML.js"></script>
+  <script src="../../components/logica/formulario/validacaoCampos.js" defer></script>
+  <script src="./script.js" defer></script>
   <link rel="stylesheet" href="style.css" />
   <title>Cadastro</title>
 </head>
@@ -15,28 +17,39 @@
   <header></header>
   <main>
     <div id="cadastro">
-      <form>
+      <form action="">
         <h2>CADASTRO</h2>
         <ul class="campos_form">
           <li>
             <label for="nome_usuario">Nome de usuário:</label>
-            <input id="nome_usuario" type="text" placeholder="ex: Juliano Pereira" class="msg-correto" />
-            <p>Nome incorreto</p>
+            <input id="nome_usuario" type="text" name="nome_usuario" placeholder="ex: Juliano Pereira"
+              class="msg-correto" />
+            <p id="error-nome-usuario">Nome incorreto</p>
           </li>
           <li>
             <label for="email">Email:</label>
-            <input id="email" type="text" placeholder="ex: juliano.Per@gmail.com" />
-            <p>Email incorreto</p>
+            <input id="email" type="email" name="email" placeholder="ex: juliano.Per@gmail.com" />
+            <p id="error-email">Email incorreto</p>
           </li>
           <li>
             <label for="confirmar_email">Confirme seu e-mail:</label>
-            <input id="confirmar_email" type="text" placeholder="ex: juliano.Per@gmail.com" />
-            <p>Email incorreto</p>
+            <input id="confirmar_email" type="email" name="confirmar_email" placeholder="ex: juliano.Per@gmail.com" />
+            <p id="error-confirmar-email">Email incorreto</p>
           </li>
           <li>
             <label for="data_nascimento">Data de nascimento:</label>
-            <input id="data_nascimento" type="date" class="campo-errado" />
-            <p class="visivel msg-errado">Data de nascimento incorreta</p>
+            <input id="data_nascimento" type="date" name="data_nascimento" />
+            <p id="error-dt-nascimento">Data de nascimento incorreta</p>
+          </li>
+          <li>
+            <label for="senha">Senha:</label>
+            <input id="senha" type="password" name="senha" />
+            <p id="error-senha">Entrada não aceita</p>
+          </li>
+          <li>
+            <label for="repete_senha">Repetir senha:</label>
+            <input id="repete_senha" type="password" name="repete_senha" />
+            <p id="error-repetir-senha">As senhas não são iguais</p>
           </li>
           <li>
             <div id="termos_de_uso">
@@ -44,18 +57,18 @@
                 Aceito os <a id="termo_docs" class="form_docs" href="">Termos de Uso</a> e a
                 <a id="politica_docs" class="form_docs" href="">Política de Privacidade</a> da Proz Arts.
               </label>
-              <input id="termos_check" type="checkbox" />
+              <input id="termos_check" type="checkbox" name="termos_de_uso" />
             </div>
             <div id="aceitar_conteudo">
               <label for="conteudo_check">
                 Aceito receber os conteúdos informativos exclusivo por email com novidades sobre os títulos
                 da Proz Artz. Posso cancelar a qualquer momento.
               </label>
-              <input id="conteudo_check" type="checkbox" />
+              <input id="conteudo_check" type="checkbox" name="aceitar_conteudo" />
             </div>
           </li>
         </ul>
-        <button class="enviar_forms" type="submit">INSCREVA-SE</button>
+        <button id="enviar_forms" type="submit" disabled>INSCREVA-SE</button>
       </form>
     </div>
     <img src="../../images/ea_hero.png" alt="wallpaper_formulario" />

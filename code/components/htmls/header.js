@@ -1,4 +1,4 @@
-const uriLogin = () => {window.location.href = localizacao_da_raiz() + "pages/login/index.html"};
+const uriLogin = () => { window.location.href = localizacao_da_raiz() + "pages/login/index.html" };
 
 const montarLogo = () => {
   const uriHome = localizacao_da_raiz() + "index.html";
@@ -38,11 +38,10 @@ const montarMenuBar = () => {
   btn_login.innerText = "LOGIN"
   nav.appendChild(btn_login)
 
-  console.log(nav.textContent)
   return nav
 }
 
-function montarHeader(){
+function montarHeader() {
   const header = document.querySelector("header");
   header.appendChild(montarLogo())
   header.appendChild(montarMenuBar())
