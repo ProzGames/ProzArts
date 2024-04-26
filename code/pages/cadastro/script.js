@@ -36,14 +36,17 @@ input_email.addEventListener("change", () => {
 form.addEventListener("submit", (e) => {
   e.preventDefault()
 
+  /*
   if (!(status_input.dt_nascimento && status_input.email && status_input.nome && status_input.senha && status_input.termo_uso_e_privacidade)) {
     //tem algum campo invalido
     alert("Preencha o campo corretamente");
     btn_submit.disabled = "true"
-  }
-  alert("Usuário cadastrado com sucesso.");
+  }*/
 
+  cadastro_usuario("", input_email.value, new Date(2001, 11, 16), "", false);
+  console.log(JSON.parse(sessionStorage.getItem("usuarios")))
   setTimeout(() => {
+    alert("Usuário cadastrado com sucesso.");
     window.location.href = localizacao_da_raiz() + "index.html"
-  }, 3000);
+  }, 5000);
 })
