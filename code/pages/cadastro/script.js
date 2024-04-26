@@ -21,6 +21,8 @@ input_email.addEventListener("change", () => {
       msg_erro_email.style.display = "none";
     }
   } else {
+    status_input.email = false;
+
     if (!input_email.classList.contains("campo-errado")) {
       input_email.classList.add("campo-errado");
       msg_erro_email.style.display = "block";
