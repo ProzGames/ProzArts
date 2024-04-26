@@ -35,6 +35,7 @@ main form {
 }
 
 main ul {
+  height: 100%;
   list-style: none;
   background-color: white;
   display: flex;
