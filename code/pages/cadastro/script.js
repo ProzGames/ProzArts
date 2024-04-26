@@ -1,6 +1,7 @@
 const input_email = document.getElementById("email")
 const msg_erro_email = document.getElementById("error-email")
 const form = document.querySelector("form")
+const btn_submit = document.getElementById("enviar_forms")
 
 //status de todos os campos
 const status_input = {
@@ -12,7 +13,6 @@ const status_input = {
 }
 
 input_email.addEventListener("change", () => {
-  console.log(validacao_input_email(input_email.value))
   if (validacao_input_email(input_email.value)) {
     status_input.email = true;
 
@@ -20,6 +20,8 @@ input_email.addEventListener("change", () => {
       input_email.classList.remove("campo-errado");
       msg_erro_email.style.display = "none";
     }
+
+    btn_submit.removeAttribute("disabled")
   } else {
     status_input.email = false;
 
@@ -27,11 +29,18 @@ input_email.addEventListener("change", () => {
       input_email.classList.add("campo-errado");
       msg_erro_email.style.display = "block";
     }
+    btn_submit.disabled = "true"
   }
 })
 
 form.addEventListener("submit", (e) => {
   e.preventDefault()
+
+  if (!(status_input.dt_nascimento && status_input.email && status_input.nome && status_input.senha && status_input.termo_uso_e_privacidade)) {
+    //tem algum campo invalido
+    alert("Preencha o campo corretamente");
+    btn_submit.disabled = "true"
+  }
   alert("Usuário cadastrado com sucesso.");
 
   setTimeout(() => {

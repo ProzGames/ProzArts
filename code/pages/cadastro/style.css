@@ -66,7 +66,7 @@ main a {
   color: var(--link-color-um);
 }
 
-main .enviar_forms {
+main #enviar_forms {
   margin: 10px 0 20px 0;
   padding: 10px;
 }
@@ -91,13 +91,13 @@ main #conteudo_check {
   width: 18px;
 }
 
-main .enviar_forms {
+main #enviar_forms {
   background-color: var(--background-color-seis);
   color: var(--font-color-dois);
   border: none;
 }
 
-main .enviar_forms:disabled {
+main #enviar_forms:disabled {
   background-color: var(--background-color-sete);
 }
 
