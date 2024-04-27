@@ -3,6 +3,7 @@ const input_confirmar_email = document.getElementById("confirmar_email")
 const input_dt_nasc = document.getElementById("data_nascimento")
 const msg_erro_email = document.getElementById("error-email")
 const msg_erro_confirmar_email = document.getElementById("error-confirmar-email")
+const msg_erro_dt_nascimento = document.getElementById("error-dt-nascimento")
 const form = document.querySelector("form")
 const btn_submit = document.getElementById("enviar_forms")
 
@@ -11,7 +12,7 @@ const status_input = {
   nome: true,
   email: false,
   email_confirmado: false,
-  dt_nascimento: true,
+  dt_nascimento: false,
   senha: true,
   termo_uso_e_privacidade: true
 }
@@ -71,6 +72,23 @@ input_confirmar_email.addEventListener("change", () => {
   verificar_campos_preenchidos()
 })
 
+console.log(input_dt_nasc)
+input_dt_nasc.addEventListener("change", () => {
+  if (validacao_data(input_dt_nasc.value)) {
+    if (input_dt_nasc.classList.contains("campo-errado")) {
+      msg_erro_dt_nascimento.style.display = "none"
+      input_dt_nasc.classList.remove("campo-errado")
+    }
+    status_input.dt_nascimento = true
+  } else {
+    if (!input_dt_nasc.classList.contains("campo-errado")) {
+      msg_erro_dt_nascimento.style.display = "block"
+      input_dt_nasc.classList.add("campo-errado")
+    }
+    status_input.dt_nascimento = false
+  }
+  verificar_campos_preenchidos()
+})
 
 form.addEventListener("submit", (e) => {
   e.preventDefault()

@@ -19,6 +19,6 @@ function validacao_data(e) {
   const mes_correto = mes > 0 && mes < 13;
   const ano_correto = ano > 1900 && ano < (new Date(Date.now()).getFullYear() - 6)
 
-  console.log(dia_correto + " " + mes_correto + " " + ano_correto)
+  //console.log(dia_correto + " " + mes_correto + " " + ano_correto)
   return dia_correto && mes_correto && ano_correto;
 }
