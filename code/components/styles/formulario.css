@@ -9,6 +9,8 @@
 form p {
   display: none;
   font-size: 12px;
+  color: red;
+  text-align: right;
 }
 
 .campo-correto {
