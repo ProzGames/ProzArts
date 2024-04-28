@@ -160,6 +160,12 @@ hr {
   margin-left: 10%;
 }
 
+.buttonLogin a{
+  color: black;
+  text-decoration: none;
+}
+
+
 .bg-erro{
   background: #f12828 !important;
 }
