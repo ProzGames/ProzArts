@@ -117,8 +117,8 @@ form.addEventListener("submit", (e) => {
   if (input_termo_de_uso.checked) { //se o usuario aceitar os termos de uso, ele irá cadastrar
     cadastro_usuario(input_nome_usuario.value, input_email.value, new Date(2001, 11, 16), input_Senha.value, input_aceitar_conteudos_extras.checked);
     console.log(JSON.parse(sessionStorage.getItem("usuarios")))
+    exibir_mensagem_pupup("Mensagem do sistema", "Cadastro efetuado com sucesso", 5000)
     setTimeout(() => {
-      alert("Usuário cadastrado com sucesso.");
       window.location.href = localizacao_da_raiz() + "index.html"
     }, 5000);
   } else {

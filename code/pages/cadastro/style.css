@@ -1,5 +1,6 @@
 @import url("../../components/styles/global.css");
 @import url("../../components/styles/formulario.css");
+@import url("../../components/styles/msgPopUp.css");
 
 main {
   display: flex;
