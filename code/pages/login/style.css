@@ -159,3 +159,24 @@ hr {
 
   margin-left: 10%;
 }
+
+.buttonLogin a{
+  color: black;
+  text-decoration: none;
+}
+
+
+.bg-erro{
+  background: #f12828 !important;
+}
+
+.erro{
+  margin: 5px;
+  color: rgb(255, 0, 0);
+  display: none;
+}
+
+.exibir{
+  display: block !important;
+
+}

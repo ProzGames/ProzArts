@@ -53,27 +53,30 @@
 }
 
 .topo__banner video {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
-    background-color: var(--delta);
+    top: 0;
+    left: 0;
+    object-fit: cover;
 }
 
 .topo__banner img {
-    position: absolute;
     max-width:1920px;
     max-height:549px;
-    width: 100%;
-    height: 100%;
-    top: auto;
+    top: 0;
+    left: 0;
+    object-fit: cover;
 }
 
 .topo__logo {
     position: absolute;
+    text-align: center; 
+    margin-top: 20px;
     top: 150px;
     left: 400px;
-    width: 300px;
-    height: 110px;
+    max-width: 300px;
+    max-height: 110px;
 }
 
 .topo__logo img {
@@ -136,6 +139,9 @@
 
 .menu-container {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
     background-color: var(--wild-sand-2);
 }
 
@@ -245,6 +251,52 @@
     width: 1080px;
     height: 360px;
 }
+
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(500px, 1fr)); /* 3 colunas com largura igual */
+    gap: 20px;
+    padding: 20px;
+}
+  
+  .timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8% 10% 0% 10%;
+  }
+
+.timeline-top,
+.timeline-bottom {
+  padding: 60% 0% 0% 0%;
+}
+
+  .timeline-content {
+    flex: 1;
+  }
+  
+  .timeline-item h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    font-family: var(--font-family-inter);
+    color: var(--tango);
+    
+  }
+  
+  .timeline-item p {
+    margin-bottom: 10px;
+    font-family: var(--font-family-inter);
+    font-weight: 400;
+    color: var(--black-3);
+    padding-bottom: 5%;
+  }
+  
+  .timeline-item strong {
+    font-weight: 900;
+    font-family: var(--font-family-inter);
+    color: var(--delta);
+  }
+  
 
 .newsletter {
     display: flex;
@@ -521,6 +573,19 @@ select {
     display: none; 
 }
 
+/* Estilizando o ícone do calendário para navegadores baseados em WebKit */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(100%);
+    color: red; 
+    padding-right: 5%;
+}
+
+/* Estilizando o ícone do calendário para o Internet Explorer */
+input[type="date"]::-ms-calendar-indicator {
+    filter: invert(100%);
+    color: red;
+}
+
 @media screen and (max-width: 768px) {
     .topo__banner video,
     .topo__banner img {
@@ -544,12 +609,7 @@ select {
         margin-top: 20px;
     }
 
-    .topo__btn__texto {
-        width: 80%;
-        margin: 0 auto;
-        margin-top: 20px;
-    }
-
+    .topo__btn__texto,
     .topo__video__texto {
         width: 80%;
         margin: 0 auto;
@@ -614,6 +674,14 @@ select {
     .nascimento,
     .pais {
         margin-top: 10px; 
+    }
+    .timeline {
+        grid-template-columns: 1fr; /* Altera para uma única coluna em telas menores */
+        padding: 20px; /* Ajusta o padding */
+    }
+
+    .timeline-item {
+        padding: 8% 5% 0% 5%; /* Ajusta o padding dos itens */
     }
 }
 
