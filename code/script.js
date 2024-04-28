@@ -11,18 +11,17 @@ document.addEventListener("DOMContentLoaded", function() {
   // Validação Data de Nascimento
   const inputNascimento = document.getElementById("dataNascimento");
 
-  inputNascimento.addEventListener("input", function(event) {
-    // Restrição do campo nascimento
-    const inputValue = event.target.value.replace(/\D/g, '').substring(0, 8);
-    event.target.value = inputValue;
-
-    // Verifica 9 caracteres
-    if (inputValue.length < 8) {
+  inputNascimento.addEventListener("change", function(event) {
+    const inputValue = event.target.value;
+    
+    // Verifica se a entrada coincide com o padrão de data (AAAA-MM-DD)
+    const regexData = /^\d{4}-\d{2}-\d{2}$/;
+    if (!regexData.test(inputValue)) {
         event.target.setCustomValidity("Por favor, insira uma data válida.");
         event.target.classList.add("input-error");
     } else {
         event.target.setCustomValidity("");
-        event.target.classList.remove("input-error"); 
+        event.target.classList.remove("input-error");
     }
   });
 
@@ -74,11 +73,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-// Validar o formato de e-mail
-function validarEmail(email) {
+  // Validar o formato de e-mail
+  function validarEmail(email) {
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regexEmail.test(email);
-}
+  }
 
   // Mensagem de sucesso
   function exibirMensagemSucesso() {
