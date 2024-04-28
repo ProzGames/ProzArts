@@ -7,7 +7,6 @@
   <script src="./components/funcoesGlobais.js"></script>
   <script src="./components/load/estilosExternos.js"></script>
   <script src="./components/load/componentsHTML.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-Q2l2HveJ5dMYYCkgBK4U0UvTrNJw89BgndKp3jj4JzFf0TJGFiIOqm0s1XZRDdKiu1Bw6MMjvG8Dx8JZI9HKgw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Inicio</title>
 </head>
 
@@ -95,37 +94,38 @@
       <h1 class="overlay">Aguarde! Novas funcionalidades logo serão adicionadas!</h1>
     </section>
 
-    <section class="newsletter__">
-      <div class="newsletter" id="newsletterBanner">
-        <h1 class="titulo">
-          INSCREVA-SE PARA<br />RECEBER AS<br />NOTÍCIAS DE<br />Proz Arts™
-        </h1>
-        <p class="texto">
-          Inscreva-se hoje mesmo e receba por e-mail as últimas notícias,<br />vídeos,
-          ofertas e muito mais de Proz Arts (além de outras notícias,<br />produtos,
-          eventos e promoções da PA).
-        </p>
-        <div class="">
-          <form>
-            <input class="email" type="text" id="texto" name="texto" placeholder="email@email.com" />
-            <p class="email__">E-mail:</p><br />
-            <input class="nascimento" type="text" id="dataNascimento" name="dataNascimento" placeholder="DD MM AAAA" />
-            <p class="nascimento__">Data de Nascimento:</p><br />
-
-            <select class="pais" id="primeiro">
+    <section class="newsletter" id="newsletterBanner">
+      <div class="container">
+        <div class="left">
+          <h1 class="titulo">
+            INSCREVA-SE PARA RECEBER AS NOTÍCIAS DE Proz Arts™
+          </h1>
+          <p class="texto">
+            Inscreva-se hoje mesmo e receba por e-mail as últimas notícias, vídeos,
+            ofertas e muito mais de Proz Arts (além de outras notícias, produtos,
+            eventos e promoções da PA).
+          </p>
+        </div>
+    
+        <form class="right" id="newsletterForm">
+          <div class="input-container">
+            <input class="email" type="text" id="texto" name="texto" placeholder="email@email.com" required />
+            <label for="texto" class="label">E-mail:</label>
+          </div>
+          <div class="input-container inline">
+            <label for="dataNascimento" class="label">Data de Nascimento:</label>
+            <input class="nascimento" type="text" id="dataNascimento" name="dataNascimento" maxlength="8" placeholder="DD MM AAAA" required />
+            <label for="primeiro" class="label" id="pais_label">País:</label>
+            <select class="pais" id="primeiro" required>
+              <option class="seleciona" value="">Selecione...</option>
               <option class="seleciona" value="opcao1">Brasil</option>
               <option class="seleciona" value="opcao2">Estados Unidos</option>
               <option class="seleciona" value="opcao3">Inglaterra</option>
             </select>
-            <p class="pais__">País:</p>
-            <br />
-
-            <button id="closeButton" aria-label="Fechar" title="Fechar newsletter">X</button>
-          </form>
-        </div>
-        <form>
+          </div>
+    
           <p class="texto__checkbox">
-            <input class="checkbox" type="checkbox" />
+            <input class="checkbox" type="checkbox" id="concordouTermos" required />
             <span>
               <span class="termos">Posso cancelar a assinatura a qualquer momento ao alterar
                 minhas</span>
@@ -138,8 +138,17 @@
             <button class="texto__" type="submit">INSCREVER-SE</button>
           </div>
         </form>
+  
+        <button id="closeButton" aria-label="Fechar" title="Fechar newsletter">X</button>
       </div>
     </section>
+    
+    
+     
+    
+    
+    
+    
 
   </main>
 
