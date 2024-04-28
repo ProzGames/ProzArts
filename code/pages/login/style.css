@@ -159,3 +159,18 @@ hr {
 
   margin-left: 10%;
 }
+
+.bg-erro{
+  background: #f12828 !important;
+}
+
+.erro{
+  margin: 5px;
+  color: rgb(255, 0, 0);
+  display: none;
+}
+
+.exibir{
+  display: block !important;
+
+}
