@@ -46,6 +46,8 @@ $('form').addEventListener('submit', (e) => {
   //     $('#email').classList.toggle('bg-erro');
   //     return;
   //   }
+  
+  alert('Login realizado com sucesso !');
 });
 
 const validacao = {
@@ -75,3 +77,5 @@ const validacao = {
     $(elExibirMsg).classList.remove('exibir');
   }
 }
+
+// alert('Login realizado com sucesso !');
