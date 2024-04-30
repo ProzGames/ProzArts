@@ -3,7 +3,7 @@ const $ = document.querySelector.bind(document);
 // document.querySelector('form').addEventListener('submit', (e) => {
 //     e.preventDefault();
 //     console.log('submit');
-// });
+// }); //Estrutura usada para montar a constante
 
 $('#email').addEventListener('focus', (e) => {
   validacao.limparAvisoErro('#email', '#erroEmail');
