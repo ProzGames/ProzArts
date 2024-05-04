@@ -24,7 +24,7 @@ As seguintes Sprints foram exigidas para que os integrantes consigam consumir to
 1. Desenvolver o layout de pelo menos 5 páginas no site;
 2. Apresentar as funcionalidades definidas pelas regras de negócio do tema proposto.
 
-**Ferramentas usadas: ** [figma](https://www.figma.com/).
+**Ferramentas usadas:** [figma](https://www.figma.com/).
 
 #### Sprint II - HTML
 
@@ -32,7 +32,7 @@ As seguintes Sprints foram exigidas para que os integrantes consigam consumir to
 2. Ter pelo menos 5 arquivos HTML (um para cada layout criado na Sprint I);
 3. Configurar o repositório remoto para a equipe.
 
-**Ferramentas usadas: ** [GitHub](https://github.com/) e [VSCode](https://code.visualstudio.com/).
+**Ferramentas usadas:** [GitHub](https://github.com/) e [VSCode](https://code.visualstudio.com/).
 
 #### Sprint III - CSS
 
@@ -40,7 +40,7 @@ As seguintes Sprints foram exigidas para que os integrantes consigam consumir to
 2. Implementar um design com a manipulação do modelo de caixa dos elementos, além de tamanhos e cores das fontes;
 3. Tente implementar o uso de  flex-box em ao menos uma das telas.
 
-**Ferramentas usadas: ** [GitHub](https://github.com/) e [VSCode](https://code.visualstudio.com/).
+**Ferramentas usadas:** [GitHub](https://github.com/) e [VSCode](https://code.visualstudio.com/).
 
 #### Sprint IV - JS
 
@@ -48,7 +48,7 @@ As seguintes Sprints foram exigidas para que os integrantes consigam consumir to
 2. Validar os campos de todos os formulários;
 3. Renderizar dinamicamente os elementos em pelo menos um página.
 
-**Ferramentas usadas: ** [GitHub](https://github.com/) e [VSCode](https://code.visualstudio.com/).
+**Ferramentas usadas:** [GitHub](https://github.com/) e [VSCode](https://code.visualstudio.com/).
 
 #### Sprint V - Banco de Dados
 
@@ -56,7 +56,7 @@ As seguintes Sprints foram exigidas para que os integrantes consigam consumir to
 2. Criar o Banco de Dados com informações de teste;
 3. Realizar consultas simples, idealmente juntando tabelas.
 
-**Ferramentas usadas: ** [draw.io](https://www.drawio.com/) e [sqliteonline.com](https://sqliteonline.com/).
+**Ferramentas usadas:** [draw.io](https://www.drawio.com/) e [sqliteonline.com](https://sqliteonline.com/).
 
 ### Estrutura do projeto
 
