@@ -25,3 +25,9 @@ Este é um projeto simples com o objetivo de usar todo o conhecimento obtido pel
   - images: contém todas as imagens usadas no site
   - pages: contém uma lista de diretórios, sendo cada um armazenando a estrutura e estilização própria e independente.
   - index.html e style.css: respectivamente a estrutura e estilização da página inicial (Home)
+
+### Modelagem do Banco de Dados do projeto Completo
+
+Logo a seguir será mostrado o DER, Diagrama de Entidade e Relacionamento, e MER, Modelo de Entidade e Relacionamento, do projeto da ProzArts que incluí a lógica de quando o usuário loga com sucesso, embora não tenha sido implementado por conter muitas funcionalidades além das que foram solicitadas.
+
+![MER e DER do projeto ProzArts](./imgs/Diagrama_ProzGames.drawio.png)
