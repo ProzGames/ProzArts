@@ -51,229 +51,197 @@ function validar_ativacao_do_botao() {
 
 /**
  * 
+ * @param {HTMLInputElement} input 
+ * @param {HTMLInputElement} label 
+ * @param {String} mensagem 
+ */
+function campoErrado(input, label, mensagem) {
+  if (!input.classList.contains("campo-errado")) {
+    input.classList.add("campo-errado");
+    label.style.display = "block";
+  }
+  label.innerText = mensagem;
+}
+
+/**
+ * 
+ * @param {HTMLInputElement} input 
+ * @param {HTMLInputElement} label 
+ */
+function campoNeutro(input, label) {
+  if (input.classList.contains("campo-errado")) {
+    input.classList.remove("campo-errado");
+    label.style.display = "none";
+  }
+}
+
+/**
+ * 
+ * @param {HTMLInputElement} input 
+ * @param {HTMLInputElement} label 
+ */
+function toggleCampoObrigatorio(input, label) {
+  input.addEventListener("blur", (e) => {
+    if (e.target.value == "")
+      campoErrado(e.target, label, "campo obrigatório.")
+
+    validar_ativacao_do_botao()
+  })
+}
+
+/**
+ * 
+ * @param {function} confirmarSintaxe funcção que verifica a sintaxe do campo
+ * @param {string} msgErroSintaxe mensagem indicando que a sintaxe do campo está incorreta
+ * @param {HTMLInputElement} input 
+ * @param {HTMLLabelElement} label 
+ * @param {function} inputCorreto função executada quando o input estiver correto
+ * @param {function} inputIncorreto função executada quando o input estiver incorreto
+ */
+function toggleCamposDiferentes(confirmarSintaxe, msgErroSintaxe, input, label, inputCorreto, inputIncorreto) {
+  input.addEventListener("change", (e) => {
+    if (e.target.value == "") return;
+    if (confirmarSintaxe != null) {
+      if (!confirmarSintaxe(e.target.value)) {
+        campoErrado(input, label, msgErroSintaxe);
+        inputIncorreto()
+        return;
+      }
+    }
+
+    campoNeutro(input, label);
+    inputCorreto();
+    validar_ativacao_do_botao()
+  })
+}
+
+/**
+ * 
+ * @param {?function} confirmarSintaxe funcção que verifica a sintaxe do campo
+ * @param {?string} msgErroSintaxe mensagem indicando que a sintaxe do campo está incorreta
+ * @param {HTMLInputElement} inputA campo 1 do formulário
+ * @param {HTMLInputElement} inputB campo 2 do formulário
+ * @param {HTMLLabelElement} labelA label vinculado ao campo 1 do formulário
+ * @param {HTMLLabelElement} labelB label vinculado ao campo 2 do formulário
+ * @param {string} msgErroCamposIguais 
+ * @param {function} inputsCorretos função executada quando os inputs estiverem corretos
+ * @param {function} inputsIncorretos função executada quando os inputs estiverem errados
+ */
+function toggleCamposIguais(confirmarSintaxe, msgErroSintaxe, inputA, inputB, labelA, labelB, msgErroCamposIguais, inputsCorretos, inputsIncorretos) {
+  inputA.addEventListener("change", (e) => {
+    if (e.target.value == "") return;
+
+    if (confirmarSintaxe != null) {
+      if (!confirmarSintaxe(e.target.value)) {
+        campoErrado(inputA, labelA, msgErroSintaxe);
+        inputsIncorretos()
+        return;
+      }
+    }
+    if (e.target.value != inputB.value) {
+      if (inputB.value != "") {
+        campoErrado(inputA, labelA, msgErroCamposIguais);
+        campoErrado(inputB, labelB, msgErroCamposIguais);
+        inputsIncorretos()
+      } else {
+        campoNeutro(inputA, labelA);
+        campoNeutro(inputB, labelB);
+        validar_ativacao_do_botao();
+      }
+    } else {
+      campoNeutro(inputA, labelA);
+      campoNeutro(inputB, labelB);
+      inputsCorretos();
+      validar_ativacao_do_botao();
+    }
+  })
+
+  inputB.addEventListener("change", (e) => {
+    if (e.target.value == "") return;
+    if (confirmarSintaxe != null) {
+      if (!confirmarSintaxe(e.target.value)) {
+        campoErrado(inputB, labelB, msgErroSintaxe);
+        inputsIncorretos()
+        return;
+      }
+    }
+    if (e.target.value != inputA.value) {
+      if (inputA.value != "") {
+        campoErrado(inputA, labelA, msgErroCamposIguais);
+        campoErrado(inputB, labelB, msgErroCamposIguais);
+        inputsIncorretos()
+      } else {
+        campoNeutro(inputA, labelA);
+        campoNeutro(inputB, labelB);
+        validar_ativacao_do_botao();
+      }
+    } else {
+      campoNeutro(inputA, labelA);
+      campoNeutro(inputB, labelB);
+      inputsCorretos();
+      validar_ativacao_do_botao();
+    }
+  })
+}
+
+// fazendo a verificação do campo obrigatório
+toggleCampoObrigatorio(input_nome_usuario, msg_erro_nome_usuario);
+toggleCampoObrigatorio(input_email, msg_erro_email);
+toggleCampoObrigatorio(input_confirmar_email, msg_erro_confirmar_email);
+toggleCampoObrigatorio(input_dt_nasc, msg_erro_dt_nascimento);
+toggleCampoObrigatorio(input_Senha, msg_erro_Senha);
+toggleCampoObrigatorio(input_repete_Senha, msg_erro_repete_senha);
+
+// fazendo a verificação de campos independentes
+toggleCamposDiferentes(
+  validacao_input_nome_de_usuario, "nome de usuário invalido",
+  input_nome_usuario, msg_erro_nome_usuario,
+  () => { status_input.nome = true }, () => { status_input.nome = false }
+)
+toggleCamposDiferentes(
+  validacao_data, "data inválida",
+  input_dt_nasc, msg_erro_dt_nascimento,
+  () => { status_input.dt_nascimento = true }, () => { status_input.dt_nascimento = false }
+)
+
+// fazendo a verificação de campos iguais
+toggleCamposIguais(validacao_input_email, "email inválido",
+  input_email, input_confirmar_email,
+  msg_erro_email, msg_erro_confirmar_email,
+  "os emails são diferentes.",
+  () => { status_input.email = true }, () => { status_input.email = false }
+)
+toggleCamposIguais(
+  validacao_senha, "senha inválida",
+  input_Senha, input_repete_Senha,
+  msg_erro_Senha, msg_erro_repete_senha,
+  "as senhas são diferentes.",
+  () => { status_input.senha = true }, () => { status_input.senha = false }
+)
+
+/**
+ * 
  * @returns {boolean} true os campos de senha e email estão corretos, além do usuário ter aceitado o termo e falso caso contrário
  */
 function validar_campos_de_confirmacao() {
-  if (input_email.value !== input_confirmar_email.value) {
-    status_input.email = false
-
-    if (!input_email.classList.contains("campo-errado")) {
-      input_email.classList.add("campo-errado");
-      msg_erro_email.style.display = "block";
-    }
-    if (!input_confirmar_email.classList.contains("campo-errado")) {
-      input_confirmar_email.classList.add("campo-errado");
-      msg_erro_confirmar_email.style.display = "block";
-    }
-    msg_erro_email.innerText = "os emails não são iguais";
-    msg_erro_confirmar_email.innerText = "os emails não são iguais";
-  } else {
-    status_input.email = true
-
-    if (input_email.classList.contains("campo-errado")) {
-      input_email.classList.remove("campo-errado");
-      msg_erro_email.style.display = "none";
-    }
-    if (input_confirmar_email.classList.contains("campo-errado")) {
-      input_confirmar_email.classList.remove("campo-errado");
-      msg_erro_confirmar_email.style.display = "none";
-    }
-  }
-
-  if (input_Senha.value !== input_repete_Senha.value) {
-    status_input.senha = false
-
-    if (!input_Senha.classList.contains("campo-errado")) {
-      input_Senha.classList.add("campo-errado")
-      msg_erro_Senha.style.display = "block"
-    }
-    if (!input_Senha.classList.contains("campo-errado")) {
-      input_repete_Senha.classList.add("campo-errado")
-      msg_erro_repete_senha.style.display = "block"
-    }
-    msg_erro_Senha.innerText = "as senhas não são iguais";
-    msg_erro_repete_senha.innerText = "as senhas não são iguais";
-  } else {
-    status_input.senha = true
-
-    if (input_Senha.classList.contains("campo-errado")) {
-      input_Senha.classList.remove("campo-errado")
-      msg_erro_Senha.style.display = "none"
-    }
-    if (input_Senha.classList.contains("campo-errado")) {
-      input_repete_Senha.classList.remove("campo-errado")
-      msg_erro_repete_senha.style.display = "none"
-    }
-  }
 
   if (input_termo_de_uso.checked) {
     if (msg_erro_termo_de_uso.style.display === "block") msg_erro_termo_de_uso.style.display = "none"
   }
 
   validar_ativacao_do_botao()
-  return status_input.senha && status_input.email && input_termo_de_uso.checked;
+  return input_termo_de_uso.checked;
 }
-
-input_nome_usuario.addEventListener("change", () => {
-  const value = "" + input_nome_usuario.value
-  if (value.length === 0) {
-    if (status_input.nome) status_input.nome = false;
-    if (!input_nome_usuario.classList.contains("campo-errado")) {
-      input_nome_usuario.classList.add("campo-errado")
-      msg_erro_nome_usuario.style.display = "block"
-    }
-    msg_erro_nome_usuario.innerText = "Campo obrigatório"
-  } else if (!validacao_input_nome_de_usuario(value)) {
-    if (status_input.nome) status_input.nome = false;
-    if (!input_nome_usuario.classList.contains("campo-errado")) {
-      input_nome_usuario.classList.add("campo-errado")
-      msg_erro_nome_usuario.style.display = "block"
-    }
-    msg_erro_nome_usuario.innerText = "Sintaxe incorreta, use apenas letras e/ou espaço em branco"
-  } else {
-    if (!status_input.nome) status_input.nome = true;
-    if (input_nome_usuario.classList.contains("campo-errado")) {
-      input_nome_usuario.classList.remove("campo-errado")
-      msg_erro_nome_usuario.style.display = "none"
-    }
-  }
-  verificar_campos_preenchidos()
-  console.log(status_input)
-})
-
-input_email.addEventListener("change", () => {
-  const value = "" + input_email.value
-
-  if (value.length === 0) {
-    if (status_input.email) status_input.email = false;
-    if (!input_email.classList.contains("campo-errado")) {
-      input_email.classList.add("campo-errado");
-      msg_erro_email.style.display = "block";
-    }
-    msg_erro_email.innerText = "campo oobrigatório";
-  } else if (!validacao_input_email(input_email.value)) {
-    if (status_input.email) status_input.email = false;
-    if (!input_email.classList.contains("campo-errado")) {
-      input_email.classList.add("campo-errado");
-      msg_erro_email.style.display = "block";
-    }
-    msg_erro_email.innerText = "formato de email incorreto. só sera aceito gmail, hotmail ou outlook."
-  } else {
-    if (!status_input.email) status_input.email = true;
-    if (input_email.classList.contains("campo-errado")) {
-      input_email.classList.remove("campo-errado");
-      msg_erro_email.style.display = "none";
-    }
-  }
-
-  validar_ativacao_do_botao()
-})
-
-input_confirmar_email.addEventListener("change", () => {
-  const value = "" + input_confirmar_email.value
-
-  if (value.length === 0) {
-    if (status_input.email) status_input.email = false;
-    if (!input_confirmar_email.classList.contains("campo-errado")) {
-      input_confirmar_email.classList.add("campo-errado");
-      msg_erro_confirmar_email.style.display = "block";
-    }
-    msg_erro_confirmar_email.innerText = "campo oobrigatório";
-  } else if (!validacao_input_email(input_confirmar_email.value)) {
-    if (status_input.email) status_input.email = false;
-    if (!input_confirmar_email.classList.contains("campo-errado")) {
-      input_confirmar_email.classList.add("campo-errado");
-      msg_erro_confirmar_email.style.display = "block";
-    }
-    msg_erro_confirmar_email.innerText = "formato de email incorreto. só sera aceito gmail, hotmail ou outlook."
-  } else {
-    if (!status_input.email) status_input.email = true;
-    if (input_confirmar_email.classList.contains("campo-errado")) {
-      input_confirmar_email.classList.remove("campo-errado");
-      msg_erro_confirmar_email.style.display = "none";
-    }
-  }
-  validar_ativacao_do_botao()
-})
-
-input_dt_nasc.addEventListener("change", () => {
-  if (!validacao_data(input_dt_nasc.value)) {
-    if (!input_dt_nasc.classList.contains("campo-errado")) {
-      msg_erro_dt_nascimento.style.display = "block"
-      input_dt_nasc.classList.add("campo-errado")
-    }
-    status_input.dt_nascimento = false
-  } else if (input_dt_nasc.classList.contains("campo-errado")) {
-    status_input.dt_nascimento = true
-    msg_erro_dt_nascimento.style.display = "none"
-    input_dt_nasc.classList.remove("campo-errado")
-  }
-  validar_ativacao_do_botao()
-})
-
-input_Senha.addEventListener("change", () => {
-  const value = input_Senha.value + "";
-  if (value.length < 4) {
-    if (status_input.senha) status_input.senha = false
-    if (!input_Senha.classList.contains("campo-errado")) {
-      msg_erro_Senha.style.display = "block"
-      input_Senha.classList.add("campo-errado")
-    }
-    msg_erro_Senha.innerText = "A senha deve contém no mínimo 4 caracteres."
-  } else if (!validacao_senha(value)) {
-    if (status_input.senha) status_input.senha = false
-    if (!input_Senha.classList.contains("campo-errado")) {
-      msg_erro_Senha.style.display = "block"
-      input_Senha.classList.add("campo-errado")
-    }
-    msg_erro_Senha.innerText = "A senha só pode conter A-Z, a-z, 0-9 e os seguintes caracteres especiais: @#$&%-_"
-  } else {
-    if (!status_input.senha) status_input.senha = true
-    if (input_Senha.classList.contains("campo-errado")) {
-      msg_erro_Senha.style.display = "none"
-      input_Senha.classList.remove("campo-errado")
-    }
-  }
-  validar_ativacao_do_botao()
-})
-
-input_repete_Senha.addEventListener("change", () => {
-  const value = input_Senha.value + "";
-  if (value.length < 4) {
-    if (status_input.senha) status_input.senha = false
-    if (!input_repete_Senha.classList.contains("campo-errado")) {
-      msg_erro_repete_senha.style.display = "block"
-      input_repete_Senha.classList.add("campo-errado")
-    }
-    msg_erro_repete_senha.innerText = "A senha deve contém no mínimo 4 caracteres."
-  } else if (!validacao_senha(value)) {
-    if (status_input.senha) status_input.senha = false
-    if (!input_repete_Senha.classList.contains("campo-errado")) {
-      msg_erro_repete_senha.style.display = "block"
-      input_repete_Senha.classList.add("campo-errado")
-    }
-    msg_erro_repete_senha.innerText = "A senha só pode conter A-Z, a-z, 0-9 e os seguintes caracteres especiais: @#$&%-_"
-  } else {
-    if (!status_input.senha) status_input.senha = true
-    if (input_repete_Senha.classList.contains("campo-errado")) {
-      msg_erro_repete_senha.style.display = "none"
-      input_repete_Senha.classList.remove("campo-errado")
-    }
-  }
-  validar_ativacao_do_botao()
-})
 
 form.addEventListener("submit", (e) => {
   e.preventDefault()
-
-  if (validar_campos_de_confirmacao()) { //se o usuario aceitar os termos de uso, ele irá cadastrar
-    cadastro_usuario(input_nome_usuario.value, input_email.value, new Date(2001, 11, 16), input_Senha.value, input_aceitar_conteudos_extras.checked);
-    console.log(JSON.parse(sessionStorage.getItem("usuarios")))
+  if (validar_campos_de_confirmacao()) {
+    const data = input_dt_nasc.value.split("-")
+    cadastro_usuario(input_nome_usuario.value, input_email.value, new Date(data[0], data[1], data[2]), input_Senha.value, input_aceitar_conteudos_extras.checked);
     exibir_mensagem_pupup("Mensagem do sistema", "Cadastro efetuado com sucesso", 5000)
     setTimeout(() => {
       window.location.href = localizacao_da_raiz() + "index.html"
     }, 5000);
-  } else {
+  } else
     msg_erro_termo_de_uso.style.display = "block"
-  }
 })
