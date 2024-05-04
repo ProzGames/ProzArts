@@ -8,6 +8,7 @@
   <script src="../../components/load/estilosExternos.js"></script>
   <script src="../../components/load/componentsHTML.js"></script>
   <script src="../../components/logica/formulario/validacaoCampos.js" defer></script>
+  <script src="../../components/htmls/msgPopUp.js" defer></script>
   <script src="./script.js" defer></script>
   <link rel="stylesheet" href="style.css" />
   <title>Cadastro</title>
@@ -24,7 +25,7 @@
             <label for="nome_usuario">Nome de usuário:</label>
             <input id="nome_usuario" type="text" name="nome_usuario" placeholder="ex: Juliano Pereira"
               class="msg-correto" />
-            <p id="error-nome-usuario">Nome incorreto</p>
+            <p id="error-nome-usuario"></p>
           </li>
           <li>
             <label for="email">Email:</label>
@@ -57,15 +58,16 @@
                 Aceito os <a id="termo_docs" class="form_docs" href="">Termos de Uso</a> e a
                 <a id="politica_docs" class="form_docs" href="">Política de Privacidade</a> da Proz Arts.
               </label>
-              <input id="termos_check" type="checkbox" name="termos_de_uso" />
+              <input id="termos_check" type="checkbox" name="termos_de_uso" value="termos_De_uso" />
             </div>
             <div id="aceitar_conteudo">
               <label for="conteudo_check">
                 Aceito receber os conteúdos informativos exclusivo por email com novidades sobre os títulos
                 da Proz Artz. Posso cancelar a qualquer momento.
               </label>
-              <input id="conteudo_check" type="checkbox" name="aceitar_conteudo" />
+              <input id="conteudo_check" type="checkbox" name="aceitar_conteudo" value="permite_conteudo_extra" />
             </div>
+            <p id="error-termo-de-uso">Para concluir o cadastro é necessário aceitar os termos de uso.</p>
           </li>
         </ul>
         <button id="enviar_forms" type="submit" disabled>INSCREVA-SE</button>

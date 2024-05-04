@@ -3,7 +3,7 @@ const $ = document.querySelector.bind(document);
 // document.querySelector('form').addEventListener('submit', (e) => {
 //     e.preventDefault();
 //     console.log('submit');
-// });
+// }); //Estrutura usada para montar a constante
 
 $('#email').addEventListener('focus', (e) => {
   validacao.limparAvisoErro('#email', '#erroEmail');
@@ -46,6 +46,10 @@ $('form').addEventListener('submit', (e) => {
   //     $('#email').classList.toggle('bg-erro');
   //     return;
   //   }
+  exibir_mensagem_pupup("Mensagem do sistema", "Login realizado com sucesso!", 5000)
+  setTimeout(() => {
+    window.location.href = localizacao_da_raiz() + "index.html"
+  }, 5000);
 });
 
 const validacao = {
@@ -59,15 +63,15 @@ const validacao = {
     return true;
   },
   minCaracteres: function (el, elExibirMsg, qtdCaracteres) {
-    if($(el).value.length < qtdCaracteres) {
+    if ($(el).value.length < qtdCaracteres) {
       $(el).classList.add('bg-erro');
-      $(elExibirMsg).innerText = 
+      $(elExibirMsg).innerText =
         `Mínimo de ${qtdCaracteres} caracteres`;
       $(elExibirMsg).classList.add('exibir');
     } else {
-        // $(el).classList.remove('bg-erro');
-        // $(elExibirMsg).classList.remove('exibir');
-        this.limparAvisoErro(el, elExibirMsg);
+      // $(el).classList.remove('bg-erro');
+      // $(elExibirMsg).classList.remove('exibir');
+      this.limparAvisoErro(el, elExibirMsg);
     }
   },
   limparAvisoErro: function (el, elExibirMsg) {

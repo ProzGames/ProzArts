@@ -82,6 +82,3 @@ function cadastro_usuario(nome, email, data_nascimento, senha, assinar_novidades
     sessionStorage.setItem("usuarios", JSON.stringify(lista_usuarios))
   }
 }
-
-cadastro_usuario("Francisco", "francisco@gmail.com", new Date(2001, 11, 16), "dada", false);
-//console.log(JSON.parse(sessionStorage.getItem("usuarios")))
