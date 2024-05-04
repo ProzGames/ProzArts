@@ -30,4 +30,4 @@ Este é um projeto simples com o objetivo de usar todo o conhecimento obtido pel
 
 Logo a seguir será mostrado o DER, Diagrama de Entidade e Relacionamento, e MER, Modelo de Entidade e Relacionamento, do projeto da ProzArts que incluí a lógica de quando o usuário loga com sucesso, embora não tenha sido implementado por conter muitas funcionalidades além das que foram solicitadas.
 
-![MER e DER do projeto ProzArts](./imgs/Diagrama_ProzGames.drawio.png)
+![MER e DER do projeto ProzArts](./docs/bd/Diagrama_ProzGames.drawio.png)
