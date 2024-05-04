@@ -1,4 +1,5 @@
 @import url("../../components/styles/global.css");
+@import url("../../components/styles/msgPopUp.css");
 
 * {
   margin: 0;
@@ -20,7 +21,7 @@ main img {
   object-fit: cover;
   object-position: center;
   filter: brightness(50%);
-  
+
 }
 
 .formLogin {
@@ -100,7 +101,7 @@ main label {
   align-items: center;
 }
 
-#lembrar_usuario > label {
+#lembrar_usuario>label {
   margin-left: 8px;
 }
 
@@ -160,24 +161,24 @@ hr {
   margin-left: 10%;
 }
 
-.buttonLogin a{
+.buttonLogin a {
   color: black;
   text-decoration: none;
 }
 
 
-.bg-erro{
+.bg-erro {
   background: #f12828 !important;
-  border: #f12828 ;
+  border: #f12828;
 }
 
-.erro{
+.erro {
   margin: 5px;
   color: rgb(255, 0, 0);
   display: none;
 }
 
-.exibir{
+.exibir {
   display: block !important;
 
 }
