@@ -91,6 +91,10 @@
   text-align: center;
 }
 
+.overlay h1.overlay {
+  font-size: 10vh /* Tamanho de fonte desejado */
+}
+
 .titulo {
     background-color: transparent;
     color: var(--hunter-green);
