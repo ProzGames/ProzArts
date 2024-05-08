@@ -46,10 +46,10 @@ $('form').addEventListener('submit', (e) => {
   //     $('#email').classList.toggle('bg-erro');
   //     return;
   //   }
-  exibir_mensagem_pupup("Mensagem do sistema", "Login realizado com sucesso!", 5000)
+  exibir_mensagem_pupup("Mensagem do sistema", "Login realizado com sucesso!", 3000)
   setTimeout(() => {
     window.location.href = localizacao_da_raiz() + "index.html"
-  }, 5000);
+  }, 3000);
 });
 
 const validacao = {

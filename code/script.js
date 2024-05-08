@@ -1,33 +1,33 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Newsletter
   const newsletterBanner = document.getElementById("newsletterBanner");
   const closeButton = document.getElementById("closeButton");
 
   // "Fechar" o banner
-  closeButton.addEventListener("click", function() {
+  closeButton.addEventListener("click", function () {
     fecharBannerNewsletter();
   });
 
   // Validação Data de Nascimento
   const inputNascimento = document.getElementById("dataNascimento");
 
-  inputNascimento.addEventListener("change", function(event) {
+  inputNascimento.addEventListener("change", function (event) {
     const inputValue = event.target.value;
-    
+
     // Verifica se a entrada coincide com o padrão de data (AAAA-MM-DD)
     const regexData = /^\d{4}-\d{2}-\d{2}$/;
     if (!regexData.test(inputValue)) {
-        event.target.setCustomValidity("Por favor, insira uma data válida.");
-        event.target.classList.add("input-error");
+      event.target.setCustomValidity("Por favor, insira uma data válida.");
+      event.target.classList.add("input-error");
     } else {
-        event.target.setCustomValidity("");
-        event.target.classList.remove("input-error");
+      event.target.setCustomValidity("");
+      event.target.classList.remove("input-error");
     }
   });
 
   // Adiciona um evento de envio ao formulário
-  document.getElementById('newsletterForm').addEventListener('submit', function(event) {
-    event.preventDefault(); 
+  document.getElementById('newsletterForm').addEventListener('submit', function (event) {
+    event.preventDefault();
 
     // Validação dos campos do formulário
     if (validarFormulario()) {
@@ -60,16 +60,16 @@ document.addEventListener("DOMContentLoaded", function() {
   // Validação e-mail
   const inputEmail = document.getElementById("texto");
 
-  inputEmail.addEventListener("input", function(event) {
+  inputEmail.addEventListener("input", function (event) {
     const emailValue = event.target.value;
-    
+
     // E-mail é válido usando uma expressão regular
     if (!validarEmail(emailValue)) {
-        event.target.setCustomValidity("Por favor, insira um e-mail válido.");
-        event.target.classList.add("input-error"); 
+      event.target.setCustomValidity("Por favor, insira um e-mail válido.");
+      event.target.classList.add("input-error");
     } else {
-        event.target.setCustomValidity("");
-        event.target.classList.remove("input-error"); 
+      event.target.setCustomValidity("");
+      event.target.classList.remove("input-error");
     }
   });
 
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Mensagem de sucesso
   function exibirMensagemSucesso() {
-    alert('Formulário enviado com sucesso!');
+    exibir_mensagem_pupup("Mensagem do sistema", 'Formulário enviado com sucesso!', 3000);
   }
 
   // Fechar o banner da newsletter
