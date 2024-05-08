@@ -238,10 +238,10 @@ form.addEventListener("submit", (e) => {
   if (validar_campos_de_confirmacao()) {
     const data = input_dt_nasc.value.split("-")
     cadastro_usuario(input_nome_usuario.value, input_email.value, new Date(data[0], data[1], data[2]), input_Senha.value, input_aceitar_conteudos_extras.checked);
-    exibir_mensagem_pupup("Mensagem do sistema", "Cadastro efetuado com sucesso", 5000)
+    exibir_mensagem_pupup("Mensagem do sistema", "Cadastro efetuado com sucesso", 4000)
     setTimeout(() => {
       window.location.href = localizacao_da_raiz() + "index.html"
-    }, 5000);
+    }, 4100);
   } else
     msg_erro_termo_de_uso.style.display = "block"
 })
