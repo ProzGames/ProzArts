@@ -208,7 +208,7 @@ toggleCamposDiferentes(
 toggleCamposIguais(validacao_input_email, "email inválido",
   input_email, input_confirmar_email,
   msg_erro_email, msg_erro_confirmar_email,
-  "os emails são diferentes.",
+  "Email incorreto. Só é permitido gmail,hotmail ou outlook.",
   () => { status_input.email = true }, () => { status_input.email = false }
 )
 toggleCamposIguais(
