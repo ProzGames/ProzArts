@@ -1,4 +1,5 @@
 @import url('./components/styles/global.css');
+@import url("./components/styles/msgPopUp.css");
 @import url("https://fonts.googleapis.com/css?family=Inter:400,900");
 
 * {
@@ -7,7 +8,7 @@
     padding: 0;
 }
 
-:root { 
+:root {
     --black: #000000;
     --black-2: #00000014;
     --black-3: #161616cc;
@@ -17,7 +18,7 @@
     --wild-sand: #f3f3f3;
     --wild-sand-2: #f1f1f1;
     --wild-sand-3: #EAEAEA;
-   
+
     --font-size-l: 16.7px;
     --font-size-m: 16px;
     --font-size-s: 14.9px;
@@ -25,7 +26,7 @@
     --font-size-xs: 14.8px;
     --font-size-xxl: 21.8px;
     --font-size-xxxl: 48px;
-   
+
     --font-family-inter: "Inter", Helvetica;
 }
 
@@ -62,8 +63,8 @@
 }
 
 .topo__banner img {
-    max-width:1920px;
-    max-height:549px;
+    max-width: 1920px;
+    max-height: 549px;
     top: 0;
     left: 0;
     object-fit: cover;
@@ -71,7 +72,7 @@
 
 .topo__logo {
     position: absolute;
-    text-align: center; 
+    text-align: center;
     margin-top: 20px;
     top: 150px;
     left: 400px;
@@ -80,8 +81,8 @@
 }
 
 .topo__logo img {
-    max-width:300px;
-    max-height:150px;
+    max-width: 300px;
+    max-height: 150px;
     width: auto;
     height: auto;
 }
@@ -134,7 +135,7 @@
 }
 
 .topo__video__texto .fas {
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .menu-container {
@@ -181,7 +182,7 @@
 
 .link__jogo.active .jogo::after,
 .link__dlc.active .dlc::after {
-    width: 100%; 
+    width: 100%;
 }
 
 .link__jogo,
@@ -193,14 +194,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 20px; 
+    padding: 0 20px;
 }
 
 .link__jogo:hover,
 .link__dlc:hover {
     background-color: var(--black-2);
     height: 60px;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 .jogo,
@@ -254,65 +255,66 @@
 
 .timeline {
     display: grid;
-    grid-template-columns: repeat(2, minmax(500px, 1fr)); /* 3 colunas com largura igual */
+    grid-template-columns: repeat(2, minmax(500px, 1fr));
+    /* 3 colunas com largura igual */
     gap: 20px;
     padding: 20px;
 }
-  
-  .timeline-item {
+
+.timeline-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 8% 10% 0% 10%;
-  }
+}
 
 .timeline-top,
 .timeline-bottom {
-  padding: 60% 0% 0% 0%;
+    padding: 60% 0% 0% 0%;
 }
 
-  .timeline-content {
+.timeline-content {
     flex: 1;
-  }
-  
-  .timeline-item h2 {
+}
+
+.timeline-item h2 {
     font-size: 24px;
     margin-bottom: 5px;
     font-family: var(--font-family-inter);
     color: var(--tango);
-    
-  }
-  
-  .timeline-item p {
+
+}
+
+.timeline-item p {
     margin-bottom: 10px;
     font-family: var(--font-family-inter);
     font-weight: 400;
     color: var(--black-3);
     padding-bottom: 5%;
-  }
-  
-  .timeline-item strong {
+}
+
+.timeline-item strong {
     font-weight: 900;
     font-family: var(--font-family-inter);
     color: var(--delta);
-  }
-  
+}
+
 
 .newsletter {
     display: flex;
-    align-items: center; 
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
     background-color: #161616c2;
     font-family: var(--font-family-inter);
-    position: relative; 
+    position: relative;
 }
 
 .container {
     display: flex;
-    flex-wrap: wrap; 
-    align-items: center; 
-    justify-content: flex-end; 
-    max-width: 100%; 
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 100%;
 }
 
 .input-container.inline {
@@ -339,12 +341,12 @@
 }
 
 .left {
-    flex: 1; 
-    padding: 8% 5% 5% 10%; 
+    flex: 1;
+    padding: 8% 5% 5% 10%;
 }
 
 .right {
-    flex: 1; 
+    flex: 1;
     padding: 5% 10% 5% 0%;
 }
 
@@ -361,7 +363,7 @@
     font-size: var(--font-size-l);
     font-weight: 400;
     line-height: 27px;
-    margin-right: 20px; 
+    margin-right: 20px;
 }
 
 .input-container {
@@ -385,7 +387,7 @@
     border-color: var(--wild-sand);
     border-radius: 3px;
     height: 70px;
-    width: calc(100% - 20px); 
+    width: calc(100% - 20px);
 }
 
 #texto {
@@ -422,7 +424,7 @@
     display: flex;
     position: absolute;
     left: calc(50% + 10px);
-    justify-content: space-between; 
+    justify-content: space-between;
     background-color: transparent;
     border: 2px solid;
     border-color: var(--wild-sand);
@@ -432,7 +434,7 @@
 }
 
 #pais_label {
-    position: absolute; 
+    position: absolute;
     left: calc(50% + 20px);
 }
 
@@ -449,8 +451,8 @@
 
 .nascimento,
 .pais {
-    flex-basis: 50%; 
-    margin-bottom: 20px; 
+    flex-basis: 50%;
+    margin-bottom: 20px;
 }
 
 .seleciona {
@@ -481,7 +483,7 @@
 .texto__checkbox {
     color: var(--wild-sand);
     font-size: var(--font-size-m);
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     margin-top: 13%;
 }
 
@@ -495,7 +497,7 @@
     font-style: normal;
 }
 
-.texto__  {
+.texto__ {
     color: var(--wild-sand);
     font-family: var(--font-family-inter);
     font-size: 18px;
@@ -529,7 +531,7 @@
     color: orange;
 }
 
-input-error{
+input-error {
     border-color: var(--tango);
 }
 
@@ -544,16 +546,16 @@ form {
 
 input[type="text"],
 select {
-    padding: 2% 3%; 
-    margin-right: 2%; 
+    padding: 2% 3%;
+    margin-right: 2%;
 }
 
 .label {
-    margin-right: 2%; 
+    margin-right: 2%;
 }
 
 .button {
-    margin-top: 5%; 
+    margin-top: 5%;
 }
 
 #banner {
@@ -570,13 +572,13 @@ select {
 }
 
 #videoPlayer {
-    display: none; 
+    display: none;
 }
 
 /* Estilizando o ícone do calendário para navegadores baseados em WebKit */
 input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(100%);
-    color: red; 
+    color: red;
     padding-right: 5%;
 }
 
@@ -587,6 +589,7 @@ input[type="date"]::-ms-calendar-indicator {
 }
 
 @media screen and (max-width: 768px) {
+
     .topo__banner video,
     .topo__banner img {
         width: 100%;
@@ -673,44 +676,48 @@ input[type="date"]::-ms-calendar-indicator {
 
     .nascimento,
     .pais {
-        margin-top: 10px; 
+        margin-top: 10px;
     }
+
     .timeline {
-        grid-template-columns: 1fr; /* Altera para uma única coluna em telas menores */
-        padding: 20px; /* Ajusta o padding */
+        grid-template-columns: 1fr;
+        /* Altera para uma única coluna em telas menores */
+        padding: 20px;
+        /* Ajusta o padding */
     }
 
     .timeline-item {
-        padding: 8% 5% 0% 5%; /* Ajusta o padding dos itens */
+        padding: 8% 5% 0% 5%;
+        /* Ajusta o padding dos itens */
     }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1080px) {
     .grid-container {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
 
     .right {
-        flex-direction: column; 
-        align-items: center; 
-        padding: 5% 0; 
+        flex-direction: column;
+        align-items: center;
+        padding: 5% 0;
     }
 
     .input-container.inline {
         display: flex;
         justify-items: center;
-        flex-direction: column; 
-        align-items: flex-start; 
-        margin-bottom: 20px; 
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
     }
 
     .input-container.inline label {
-        margin-right: 0; 
-        margin-bottom: 5px; 
+        margin-right: 0;
+        margin-bottom: 5px;
     }
 
     .pais {
-        margin-top: 10px; 
+        margin-top: 10px;
     }
 }

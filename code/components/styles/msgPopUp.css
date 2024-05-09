@@ -25,3 +25,16 @@
   padding-bottom: 5px;
   border-bottom: 1px solid #F17F1A;
 }
+
+#component-msg-popup #msg-popup div {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+
+#component-msg-popup #msg-popup button {
+  background-color: #F17F1A;
+  color: white;
+  padding: 10px;
+  border: 0;
+}

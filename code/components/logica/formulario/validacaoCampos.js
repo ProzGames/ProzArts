@@ -1,13 +1,3 @@
-
-/**
- * 
- * @param {string} e 
- * @returns 
- */
-function validar_campo_obrigatorio(e) {
-  return e.length > 0
-}
-
 /**
  * 
  * @param {String} e - só pode conter de a - z, A - Z e " "
